@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1F4D38;
+  --color-forest-dark: #153929;
+  --color-forest-light: #2A664B;
+  --color-leaf: #6F9F73;
+  --color-leaf-light: #8EB892;
+  --color-leaf-dark: #58825C;
+  --color-sage: #DDE9D8;
+  --color-sage-light: #EEF5EC;
+  --color-cream: #F7F3E8;
+  --color-cream-soft: #FCFAF3;
+  --color-warm-white: #FFFDF7;
+  --color-natural: #1C2821;
+  --color-natural-muted: #4D6153;
+  --color-natural-subtle: #7A8E80;
+
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  /* Mobile-first responsive type scale (~67-75% on narrow mobile, expanding gracefully) */
+  --mobile-scale: 0.72;
+  --display-size: clamp(1.85rem, 5.2vw, 3.35rem);
+  --h1-size: clamp(1.5rem, 4.2vw, 2.6rem);
+  --h2-size: clamp(1.25rem, 3.2vw, 2rem);
+  --h3-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  --body-size: clamp(0.85rem, 1.8vw, 1rem);
+  --small-size: clamp(0.72rem, 1.5vw, 0.875rem);
+  --label-size: clamp(0.65rem, 1.3vw, 0.75rem);
+
+  /* Responsive spacing system */
+  --space-section: clamp(2.25rem, 6vw, 5rem);
+  --space-section-compact: clamp(1.5rem, 4vw, 3.25rem);
+  --page-padding: clamp(0.75rem, 3.5vw, 2rem);
+  --container-max: 76rem;
+
+  /* Safe Area Insets for notch and gesture bars */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-natural);
+    background-color: var(--color-cream);
+    scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+
+  body {
+    max-width: 100vw;
+    overflow-x: clip;
+    min-height: 100dvh;
+    padding-top: var(--sat);
+    padding-bottom: var(--sab);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* =========================================================================
+   SURFACE SYSTEM (Levels 1 - 4) with Mobile Restraint
+   ========================================================================= */
+
+/* Level 1 — Base Surface */
+.surface-base {
+  background-color: var(--color-cream);
+}
+
+.surface-canvas {
+  background-color: var(--color-warm-white);
+}
+
+/* Level 2 — Elevated Surface (Subtle, clean, diffused) */
+.surface-elevated {
+  background-color: #FFFDF7;
+  border: 1px solid rgba(221, 233, 216, 0.85);
+  box-shadow: 0 2px 10px -2px rgba(31, 77, 56, 0.04), 0 1px 2px 0 rgba(31, 77, 56, 0.02);
+}
+
+/* Level 3 — Glass Surface (Lighter, restrained on mobile) */
+.surface-glass {
+  background: rgba(255, 253, 247, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 18px -3px rgba(31, 77, 56, 0.05), 0 1px 3px 0 rgba(31, 77, 56, 0.02);
+}
+
+@media (max-width: 640px) {
+  .surface-glass {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px -2px rgba(31, 77, 56, 0.04);
+  }
+}
+
+.surface-glass-forest {
+  background: rgba(31, 77, 56, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(111, 159, 115, 0.32);
+  box-shadow: 0 8px 24px -4px rgba(21, 57, 41, 0.22);
+  color: #FFFDF7;
+}
+
+@media (max-width: 640px) {
+  .surface-glass-forest {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px -3px rgba(21, 57, 41, 0.18);
+  }
+}
+
+.surface-glass-subtle {
+  background: rgba(255, 253, 247, 0.70);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(221, 233, 216, 0.6);
+}
+
+/* Level 4 — Focused / Active Surface */
+.surface-active {
+  background-color: #1F4D38;
+  color: #FFFDF7;
+  border: 1px solid #153929;
+  box-shadow: 0 2px 8px -1px rgba(31, 77, 56, 0.20);
+}
+
+.surface-active-sage {
+  background-color: #DDE9D8;
+  color: #1F4D38;
+  border: 1px solid #6F9F73;
+  box-shadow: 0 1px 4px -1px rgba(111, 159, 115, 0.15);
+}
+
+/* =========================================================================
+   SOFT NEUMORPHIC & TACTILE DEPTH
+   ========================================================================= */
+
+.tactile-button {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.18s ease;
+}
+
+.tactile-button:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px -2px rgba(31, 77, 56, 0.14);
+}
+
+.tactile-button:active {
+  transform: translateY(0.5px) scale(0.99);
+  box-shadow: 0 2px 5px rgba(31, 77, 56, 0.08);
+}
+
+.tactile-control-inset {
+  background: #F7F3E8;
+  box-shadow: inset 0 2px 4px rgba(31, 77, 56, 0.06), inset 0 1px 2px rgba(31, 77, 56, 0.04);
+  border: 1px solid rgba(221, 233, 216, 0.9);
+}
+
+.tactile-control-raised {
+  background: #FFFDF7;
+  box-shadow: 0 2px 6px rgba(31, 77, 56, 0.06), 0 1px 2px rgba(31, 77, 56, 0.04);
+  border: 1px solid rgba(221, 233, 216, 0.8);
+}
+
+/* =========================================================================
+   HERO ENTRANCE & MOTION LANGUAGE
+   ========================================================================= */
+
+@keyframes heroFadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ringExpand {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0.2;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes sproutEmerge {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.7) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(-2px) scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-center {
+  animation: heroFadeScale 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-sprout {
+  animation: sproutEmerge 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animate-ring {
+  stroke-dasharray: 600;
+  animation: ringExpand 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.page-transition {
+  animation: pageFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* =========================================================================
+   ACCESSIBILITY & PREFERS-REDUCED-MOTION
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-hero-center,
+  .animate-sprout,
+  .animate-ring,
+  .page-transition {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================================
+   PRINT-FRIENDLY HANDOUT STYLING
+   ========================================================================= */
+
+@media print {
+  header,
+  footer,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  body, html {
+    background: #FFFFFF !important;
+    color: #1C2821 !important;
+  }
+
+  .surface-base,
+  .surface-canvas,
+  .surface-elevated,
+  .surface-glass {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-color: #CCCCCC !important;
+  }
+}

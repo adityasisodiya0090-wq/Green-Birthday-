@@ -1,0 +1,8 @@
+{
+  "name": "Birthday Green",
+  "description": "A community environmental initiative turning your birth-date into a recurring monthly Green Day. Plant. Nurture. Repeat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
