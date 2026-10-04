@@ -58,10 +58,10 @@ export function CommunityActivityFeed() {
   }, [timeFilter, communityTypeFilter]);
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Activity Record"
               title="Recent Green Day Activity"
@@ -72,7 +72,7 @@ export function CommunityActivityFeed() {
 
         {/* Minimal Filters Bar */}
         <ScrollReveal delayMs={100}>
-          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl p-4 sm:p-5 border border-[#DDE9D8] mb-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 shadow-2xs">
+          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl p-3.5 sm:p-5 border border-[#DDE9D8] mb-4 sm:mb-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 shadow-2xs">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1F4D38]">
               <Filter className="w-4 h-4 text-[#6F9F73]" />
               <span>Filter Activity:</span>

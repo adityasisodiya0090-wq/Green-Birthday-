@@ -56,7 +56,7 @@ export function HeroSection() {
   const primaryCta = getPrimaryCta();
 
   return (
-    <section className="relative pt-3 pb-8 sm:pt-10 sm:pb-18 overflow-hidden">
+    <section className="relative pt-2.5 pb-6 sm:pt-10 sm:pb-16 overflow-hidden">
       {/* Background Subconscious Atmosphere: Very soft radial gradient lighting */}
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[340px] bg-gradient-to-b from-[#DDE9D8]/40 via-[#F7F3E8]/20 to-transparent blur-3xl -z-10"

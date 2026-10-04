@@ -57,11 +57,11 @@ export function Modal({ isOpen, onClose, title, children, size = 'md' }: ModalPr
       {/* Dialog Surface with Mobile-First Safe Constraints */}
       <div
         ref={modalRef}
-        className={`relative w-full ${sizeClasses[size]} max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-3rem)] flex flex-col bg-[#FFFDF7] rounded-2xl sm:rounded-3xl border border-[#DDE9D8] shadow-xl overflow-hidden transition-all duration-200 z-10 my-auto`}
+        className={`relative w-full ${sizeClasses[size]} max-h-[calc(100dvh-1.25rem)] sm:max-h-[calc(100dvh-3rem)] flex flex-col bg-[#FFFDF7] rounded-2xl sm:rounded-3xl border border-[#DDE9D8] shadow-xl overflow-hidden transition-all duration-200 z-10 my-auto pb-[var(--sab)]`}
       >
-        <div className="flex items-center justify-between px-4 sm:px-6 pt-4 sm:pt-6 pb-2 shrink-0">
+        <div className="flex items-center justify-between px-3.5 sm:px-6 pt-3.5 sm:pt-6 pb-2 shrink-0">
           {title ? (
-            <h3 id="modal-title" className="text-lg sm:text-xl font-display font-bold text-[#1F4D38]">
+            <h3 id="modal-title" className="text-base sm:text-xl font-display font-bold text-[#1F4D38]">
               {title}
             </h3>
           ) : (
@@ -70,14 +70,14 @@ export function Modal({ isOpen, onClose, title, children, size = 'md' }: ModalPr
 
           <button
             onClick={onClose}
-            className="p-2 min-w-[44px] min-h-[44px] -mr-2 flex items-center justify-center text-[#4D6153] hover:text-[#1F4D38] hover:bg-[#DDE9D8]/50 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer"
+            className="p-2 min-w-[44px] min-h-[44px] -mr-1.5 flex items-center justify-center text-[#4D6153] hover:text-[#1F4D38] hover:bg-[#DDE9D8]/50 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-1 sm:pt-2 overflow-y-auto overscroll-contain flex-1">{children}</div>
+        <div className="px-3.5 sm:px-6 pb-3.5 sm:pb-6 pt-1 sm:pt-2 overflow-y-auto overscroll-contain flex-1">{children}</div>
       </div>
     </div>
   );

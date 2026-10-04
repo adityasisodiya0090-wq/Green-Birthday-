@@ -32,10 +32,10 @@ export function WhyParticipateSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Practical Alignment"
               title="What You Get & What You Don't Need"
@@ -44,7 +44,7 @@ export function WhyParticipateSection() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
           {/* Left: What You Get */}
           <ScrollReveal delayMs={100}>
             <div className="surface-elevated rounded-3xl p-7 sm:p-9 border border-[#DDE9D8] h-full shadow-2xs space-y-5">

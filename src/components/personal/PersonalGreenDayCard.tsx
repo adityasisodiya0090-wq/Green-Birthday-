@@ -120,10 +120,10 @@ export function PersonalGreenDayCard({
 
   return (
     <div
-      className={`rounded-3xl relative overflow-hidden transition-all duration-300 ${
+      className={`rounded-2xl sm:rounded-3xl relative overflow-hidden transition-all duration-300 ${
         isToday
-          ? 'surface-glass-forest text-white p-7 sm:p-10 shadow-2xl border border-white/20'
-          : 'surface-elevated border border-[#DDE9D8] p-7 sm:p-10 shadow-sm'
+          ? 'surface-glass-forest text-white p-4 sm:p-10 shadow-2xl border border-white/20'
+          : 'surface-elevated border border-[#DDE9D8] p-4 sm:p-10 shadow-sm'
       } ${className}`}
     >
       {/* Decorative ambient subtle circle */}
@@ -132,10 +132,10 @@ export function PersonalGreenDayCard({
         aria-hidden="true"
       />
 
-      <div className="relative z-10 space-y-6">
+      <div className="relative z-10 space-y-4 sm:space-y-6">
         {/* Top Header: Unboxed metadata (Section 1A of design constitution) */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/15 dark:border-[#DDE9D8]">
-          <div className="flex items-center gap-2 text-xs font-semibold">
+        <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3 pb-3 sm:pb-4 border-b border-white/15 dark:border-[#DDE9D8]">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold">
             <span className={isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'}>
               MY GREEN DAY
             </span>
@@ -161,7 +161,7 @@ export function PersonalGreenDayCard({
           </div>
 
           <span
-            className={`text-xs ${
+            className={`text-[11px] sm:text-xs ${
               isToday ? 'text-[#DDE9D8]/90' : 'text-[#7A8E80]'
             }`}
           >
@@ -170,23 +170,23 @@ export function PersonalGreenDayCard({
         </div>
 
         {/* Center: The Marker (Section 2) */}
-        <div className="text-center py-2 space-y-1">
+        <div className="text-center py-1 sm:py-2 space-y-0.5 sm:space-y-1">
           <span
-            className={`text-xs font-bold uppercase tracking-widest block ${
+            className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest block ${
               isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'
             }`}
           >
             MY GREEN DAY
           </span>
           <h2
-            className={`font-display font-black text-6xl sm:text-7xl tracking-tight leading-none ${
+            className={`font-display font-black text-4xl xs:text-5xl sm:text-7xl tracking-tight leading-none ${
               isToday ? 'text-white' : 'text-[#1F4D38]'
             }`}
           >
             {ordinal}
           </h2>
           <span
-            className={`text-sm sm:text-base font-semibold block pt-1 ${
+            className={`text-xs sm:text-base font-semibold block pt-0.5 sm:pt-1 ${
               isToday ? 'text-[#DDE9D8]' : 'text-[#4D6153]'
             }`}
           >
@@ -196,25 +196,25 @@ export function PersonalGreenDayCard({
 
         {/* The Sequence: PLANT -> NURTURE -> RETURN (Section 2) */}
         <div
-          className={`p-4 rounded-2xl border text-center ${
+          className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border text-center ${
             isToday
               ? 'bg-white/10 border-white/15 text-white'
               : 'surface-canvas border-[#DDE9D8] text-[#1F4D38]'
           }`}
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-4 text-xs font-bold uppercase tracking-wider">
+          <div className="flex items-center justify-center gap-1.5 sm:gap-4 text-[10px] sm:text-xs font-bold uppercase tracking-wider">
             <span className="flex items-center gap-1">
-              <Sprout className="w-3.5 h-3.5 text-[#6F9F73]" />
+              <Sprout className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#6F9F73]" />
               <span>PLANT</span>
             </span>
-            <span className={isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'}>↓</span>
+            <span className={isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'}>→</span>
             <span className="flex items-center gap-1">
-              <Heart className="w-3.5 h-3.5 text-[#6F9F73]" />
+              <Heart className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#6F9F73]" />
               <span>NURTURE</span>
             </span>
-            <span className={isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'}>↓</span>
+            <span className={isToday ? 'text-[#8EB892]' : 'text-[#6F9F73]'}>→</span>
             <span className="flex items-center gap-1">
-              <RotateCcw className="w-3.5 h-3.5 text-[#6F9F73]" />
+              <RotateCcw className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#6F9F73]" />
               <span>RETURN</span>
             </span>
           </div>

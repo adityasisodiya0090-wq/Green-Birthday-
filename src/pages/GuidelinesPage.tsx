@@ -86,28 +86,28 @@ export function GuidelinesPage() {
   return (
     <div className="flex flex-col">
       {/* 01 — Hero (Section 27) */}
-      <section className="relative pt-10 pb-16 sm:pt-16 sm:pb-22 overflow-hidden border-b border-[#DDE9D8]/80">
+      <section className="relative pt-6 pb-8 sm:pt-12 sm:pb-16 overflow-hidden border-b border-[#DDE9D8]/80">
         <div
           className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[380px] bg-gradient-to-b from-[#DDE9D8]/50 via-[#F7F3E8]/30 to-transparent blur-3xl -z-10"
           aria-hidden="true"
         />
         <Container size="narrow">
-          <div className="text-center space-y-5">
+          <div className="text-center space-y-4 sm:space-y-5">
             <ScrollReveal>
-              <div className="text-xs sm:text-sm font-bold tracking-widest text-[#6F9F73] uppercase flex items-center justify-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#1F4D38]" />
+              <div className="text-[11px] sm:text-xs font-bold tracking-widest text-[#6F9F73] uppercase flex items-center justify-center gap-1.5 sm:gap-2">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1F4D38]" />
                 <span>COMMUNITY STANDARDS</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delayMs={100}>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F4D38] tracking-tight leading-[1.14] [text-wrap:balance]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F4D38] tracking-tight leading-tight [text-wrap:balance]">
                 Participate thoughtfully.
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delayMs={200}>
-              <p className="text-base sm:text-xl text-[#4D6153] leading-relaxed max-w-xl mx-auto">
+              <p className="text-sm sm:text-lg text-[#4D6153] leading-relaxed max-w-xl mx-auto">
                 «Birthday Green is simple by design. A few good practices help keep the community useful and responsible.»
               </p>
             </ScrollReveal>
@@ -116,20 +116,20 @@ export function GuidelinesPage() {
       </section>
 
       {/* 02 — Guidelines List (Sections 28 to 37) */}
-      <section className="py-18 sm:py-26 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-canvas border-b border-[#DDE9D8]/80">
         <Container size="narrow">
-          <div className="space-y-6">
+          <div className="space-y-3.5 sm:space-y-6">
             {guidelines.map((g, idx) => (
               <ScrollReveal key={g.num} delayMs={idx * 50}>
-                <div className="surface-elevated rounded-3xl p-6 sm:p-8 border border-[#DDE9D8] shadow-2xs hover:border-[#6F9F73] transition-all">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center shrink-0">
+                <div className="surface-elevated rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#DDE9D8] shadow-2xs hover:border-[#6F9F73] transition-all">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center shrink-0">
                       {g.icon}
                     </div>
 
-                    <div className="space-y-2 flex-1">
+                    <div className="space-y-1.5 sm:space-y-2 flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-display font-extrabold text-lg sm:text-xl text-[#1F4D38]">
+                        <h3 className="font-display font-extrabold text-base sm:text-xl text-[#1F4D38]">
                           {g.num}. {g.title}
                         </h3>
                       </div>
@@ -151,7 +151,7 @@ export function GuidelinesPage() {
       </section>
 
       {/* 03 — Transparency Section (Section 38) */}
-      <section className="py-18 sm:py-26 surface-base border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-base border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
             <WhatWePromise />
@@ -160,7 +160,7 @@ export function GuidelinesPage() {
       </section>
 
       {/* 04 — Combined FAQ (Section 39) */}
-      <section className="py-18 sm:py-26 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-canvas border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
             <CommonFaq />
@@ -169,20 +169,20 @@ export function GuidelinesPage() {
       </section>
 
       {/* 05 — CTA */}
-      <section className="py-18 sm:py-24 surface-base text-center">
+      <section className="py-8 sm:py-16 lg:py-20 surface-base text-center">
         <Container size="narrow">
           <ScrollReveal>
-            <div className="space-y-6 max-w-lg mx-auto">
-              <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F4D38] tracking-tight">
+            <div className="space-y-4 sm:space-y-6 max-w-lg mx-auto">
+              <h3 className="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl text-[#1F4D38] tracking-tight">
                 Ready to begin your Green Day?
               </h3>
-              <p className="text-sm sm:text-base text-[#4D6153]">
+              <p className="text-xs sm:text-base text-[#4D6153]">
                 Plant something living. Nurture it. Then return on your next Green Day.
               </p>
               <div className="pt-2 flex justify-center">
                 <Button
                   variant="primary"
-                  size="lg"
+                  size="md"
                   onClick={() => openCalculator()}
                   icon={<ArrowRight className="w-4 h-4" />}
                 >

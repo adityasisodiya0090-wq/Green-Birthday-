@@ -74,10 +74,10 @@ export function CommunityTypesSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Community Spheres"
               title="Participation Across Settings"
@@ -87,9 +87,9 @@ export function CommunityTypesSection() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={150}>
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
             {/* Intentional Zero-State for Reached Communities (Section 12) */}
-            <div className="surface-elevated rounded-3xl p-8 sm:p-12 border border-[#DDE9D8] shadow-xs text-center space-y-5 relative overflow-hidden">
+            <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-12 border border-[#DDE9D8] shadow-xs text-center space-y-4 sm:space-y-5 relative overflow-hidden">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DDE9D8]/60 text-xs font-bold uppercase tracking-wider text-[#1F4D38]">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Formal Organizational Outreach</span>

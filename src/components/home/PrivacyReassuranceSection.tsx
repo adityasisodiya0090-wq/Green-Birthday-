@@ -40,10 +40,10 @@ export function PrivacyReassuranceSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Privacy Guarantee"
               title="Your privacy stays yours."
@@ -52,7 +52,7 @@ export function PrivacyReassuranceSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {points.map((pt, idx) => (
             <ScrollReveal key={pt.title} delayMs={idx * 60}>
               <Card
@@ -60,10 +60,10 @@ export function PrivacyReassuranceSection() {
                 className="h-full flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#DDE9D8]/70 flex items-center justify-center mb-4">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#DDE9D8]/70 flex items-center justify-center mb-2.5 sm:mb-4">
                     {pt.icon}
                   </div>
-                  <h3 className="font-display font-bold text-base text-[#1F4D38] mb-2">
+                  <h3 className="font-display font-bold text-sm sm:text-base text-[#1F4D38] mb-1 sm:mb-2">
                     {pt.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -76,7 +76,7 @@ export function PrivacyReassuranceSection() {
         </div>
 
         <ScrollReveal delayMs={350}>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <div className="mt-6 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-center">
             <p className="text-xs sm:text-sm text-[#4D6153]">
               Community impact relies entirely on voluntary, anonymized planting reports.
             </p>

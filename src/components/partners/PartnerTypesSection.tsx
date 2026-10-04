@@ -32,10 +32,10 @@ export function PartnerTypesSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Community Spheres"
               title="Who Can Participate"
@@ -44,10 +44,10 @@ export function PartnerTypesSection() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
           {partnerTypes.map((type, idx) => (
             <ScrollReveal key={type.title} delayMs={idx * 80}>
-              <div className="surface-elevated rounded-3xl p-7 sm:p-9 border border-[#DDE9D8] shadow-2xs hover:border-[#6F9F73] hover:shadow-md transition-all duration-200 h-full flex flex-col justify-between group">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-[#DDE9D8] shadow-2xs hover:border-[#6F9F73] hover:shadow-md transition-all duration-200 h-full flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <div className="w-14 h-14 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">

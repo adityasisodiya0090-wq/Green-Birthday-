@@ -12,10 +12,10 @@ export function PrintableGuideSection() {
   };
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container size="narrow">
         <ScrollReveal>
-          <div className="text-center mb-14">
+          <div className="text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Printable Summary"
               title="One-Page Community Handout"
@@ -25,7 +25,7 @@ export function PrintableGuideSection() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={150}>
-          <div className="surface-elevated rounded-3xl p-6 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-6">
+          <div className="surface-elevated rounded-2xl sm:rounded-3xl p-4 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-4 sm:space-y-6">
             <div className="flex items-center justify-between pb-4 border-b border-[#DDE9D8] flex-wrap gap-3">
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5 text-[#1F4D38]" />

@@ -28,10 +28,10 @@ export function ActionGuidelinesSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Responsible Stewardship"
               title="Your Green Day is a reminder to act."
@@ -41,15 +41,15 @@ export function ActionGuidelinesSection() {
         </ScrollReveal>
 
         {/* Principles Grid */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4">
           {principles.map((p, idx) => (
             <ScrollReveal key={p.title} delayMs={idx * 60}>
-              <div className="surface-elevated rounded-2xl p-6 sm:p-7 border border-[#DDE9D8] flex items-start gap-4 shadow-2xs hover:border-[#6F9F73] transition-colors">
-                <div className="p-2 rounded-xl bg-[#DDE9D8]/70 text-[#1F4D38] shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-5 h-5 text-[#1F4D38]" />
+              <div className="surface-elevated rounded-2xl p-3.5 sm:p-6 border border-[#DDE9D8] flex items-start gap-3 sm:gap-4 shadow-2xs hover:border-[#6F9F73] transition-colors">
+                <div className="p-1.5 sm:p-2 rounded-xl bg-[#DDE9D8]/70 text-[#1F4D38] shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#1F4D38]" />
                 </div>
-                <div className="space-y-1">
-                  <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
+                <div className="space-y-0.5 sm:space-y-1">
+                  <h4 className="font-display font-bold text-sm sm:text-lg text-[#1F4D38]">
                     {p.title}
                   </h4>
                   <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">

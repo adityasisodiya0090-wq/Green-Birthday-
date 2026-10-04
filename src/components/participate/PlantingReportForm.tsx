@@ -138,7 +138,7 @@ export function PlantingReportForm({
   };
 
   return (
-    <div className="surface-glass rounded-3xl p-6 sm:p-10 border border-white/90 shadow-xl shadow-[#1F4D38]/6">
+    <div className="surface-glass rounded-2xl sm:rounded-3xl p-4 sm:p-10 border border-white/90 shadow-xl shadow-[#1F4D38]/6">
       {errorMessage && (
         <div className="mb-6">
           <StatusMessage type="note">

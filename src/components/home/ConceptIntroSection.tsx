@@ -54,10 +54,10 @@ export function ConceptIntroSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative overflow-hidden">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative overflow-hidden">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="The Monthly Cycle"
               title="What if your birthday could keep giving?"
@@ -78,7 +78,7 @@ export function ConceptIntroSection() {
             aria-hidden="true"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative z-10">
             {steps.map((step, idx) => (
               <ScrollReveal key={step.title} delayMs={idx * 120}>
                 <Card
@@ -87,8 +87,8 @@ export function ConceptIntroSection() {
                 >
                   <div>
                     {/* Header with progressive sprout visual */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
+                    <div className="flex items-center justify-between mb-3 sm:mb-6">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
                         {step.sproutVisual}
                       </div>
                       <span className="text-xs font-bold uppercase tracking-wider text-[#6F9F73]">
@@ -97,15 +97,15 @@ export function ConceptIntroSection() {
                     </div>
 
                     {/* Step Title & Subtitle */}
-                    <h3 className="text-2xl font-display font-extrabold text-[#1F4D38] tracking-tight mb-1">
+                    <h3 className="text-lg sm:text-2xl font-display font-extrabold text-[#1F4D38] tracking-tight mb-1">
                       {step.title}
                     </h3>
-                    <div className="text-xs font-semibold text-[#6F9F73] uppercase tracking-wider mb-3">
+                    <div className="text-xs font-semibold text-[#6F9F73] uppercase tracking-wider mb-2 sm:mb-3">
                       {step.stage}
                     </div>
 
                     {/* Primary Requirement Copy */}
-                    <p className="text-base font-semibold text-[#1C2821] leading-snug mb-2">
+                    <p className="text-sm sm:text-base font-semibold text-[#1C2821] leading-snug mb-1.5 sm:mb-2">
                       {step.copy}
                     </p>
 
@@ -115,7 +115,7 @@ export function ConceptIntroSection() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#DDE9D8]/70 flex items-center justify-between text-xs font-semibold text-[#1F4D38]">
+                  <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-[#DDE9D8]/70 flex items-center justify-between text-xs font-semibold text-[#1F4D38]">
                     <span>Monthly Habit</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#6F9F73] transition-transform group-hover:translate-x-1" />
                   </div>
@@ -127,11 +127,11 @@ export function ConceptIntroSection() {
 
         {/* Philosophical distinction callout with Level 3 glass styling */}
         <ScrollReveal delayMs={350}>
-          <div className="mt-14 mx-auto max-w-3xl rounded-3xl surface-glass p-7 sm:p-9 text-center shadow-sm">
-            <p className="text-lg sm:text-xl font-display font-extrabold text-[#1F4D38]">
+          <div className="mt-6 sm:mt-12 mx-auto max-w-3xl rounded-2xl sm:rounded-3xl surface-glass p-4 sm:p-8 text-center shadow-sm">
+            <p className="text-base sm:text-xl font-display font-extrabold text-[#1F4D38]">
               “Planting is the action. Nurturing is the responsibility.”
             </p>
-            <p className="mt-2.5 text-xs sm:text-sm text-[#4D6153] leading-relaxed max-w-xl mx-auto">
+            <p className="mt-2 text-xs sm:text-sm text-[#4D6153] leading-relaxed max-w-xl mx-auto">
               Anyone can put a seed in the ground on a whim. The lasting transformation happens in the quiet, faithful months of continued care.
             </p>
           </div>

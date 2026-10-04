@@ -35,10 +35,10 @@ export function CommunityRhythmVisual() {
   };
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Collective Rhythm"
               title="Every day can become someone's Green Day."
@@ -49,7 +49,7 @@ export function CommunityRhythmVisual() {
 
         {/* 1. Illustrative Flow Chain (Section 7) */}
         <ScrollReveal delayMs={100}>
-          <div className="max-w-4xl mx-auto surface-elevated rounded-3xl p-6 sm:p-8 border border-[#DDE9D8] shadow-xs mb-8">
+          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 border border-[#DDE9D8] shadow-xs mb-4 sm:mb-8">
             <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DDE9D8] flex-wrap gap-2">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1F4D38] flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4 text-[#6F9F73]" />

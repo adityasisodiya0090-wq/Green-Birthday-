@@ -73,11 +73,11 @@ export function ParticipatePage() {
       {/* 1. Hero */}
       <ParticipationHero savedDay={savedDay} />
 
-      <section className="py-14 sm:py-20 surface-base">
+      <section className="py-6 sm:py-16 surface-base">
         <Container size="narrow">
           {!completedData ? (
             /* PRE-SUBMISSION FLOW */
-            <div className="space-y-12">
+            <div className="space-y-6 sm:space-y-10">
               {/* Personal Green Day Card (Section 2) */}
               {savedDay && (
                 <ScrollReveal>
@@ -139,7 +139,7 @@ export function ParticipatePage() {
             </div>
           ) : (
             /* POST-SUBMISSION CELEBRATION & NURTURE FLOW */
-            <div className="space-y-12">
+            <div className="space-y-6 sm:space-y-10">
               {/* Digital Celebration Card & Actions (Section 20) */}
               <ScrollReveal>
                 <CelebrationCard

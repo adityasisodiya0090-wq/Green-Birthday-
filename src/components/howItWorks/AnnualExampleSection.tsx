@@ -10,10 +10,10 @@ export function AnnualExampleSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Annual Journey Example"
               title="A Year in the Life of a Green Day"
@@ -23,21 +23,21 @@ export function AnnualExampleSection() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={100}>
-          <div className="max-w-4xl mx-auto surface-glass rounded-3xl p-7 sm:p-10 border border-white/80 shadow-md">
-            <div className="text-center pb-6 border-b border-[#DDE9D8]">
-              <span className="text-xs uppercase tracking-widest text-[#6F9F73] font-bold block mb-1">
+          <div className="max-w-4xl mx-auto surface-glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/80 shadow-md">
+            <div className="text-center pb-4 sm:pb-6 border-b border-[#DDE9D8]">
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[#6F9F73] font-bold block mb-1">
                 Illustrative Example
               </span>
-              <h3 className="font-display font-extrabold text-2xl text-[#1F4D38]">
+              <h3 className="font-display font-extrabold text-lg sm:text-2xl text-[#1F4D38]">
                 Steward Born on the 16th
               </h3>
-              <p className="text-xs text-[#7A8E80] mt-1">
+              <p className="text-[11px] sm:text-xs text-[#7A8E80] mt-1">
                 * Note: 16th is an illustrative example only, not an actual participant.
               </p>
             </div>
 
             {/* 12 Months Grid */}
-            <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+            <div className="mt-4 sm:mt-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-3">
               {months.map((m, idx) => {
                 const isHighlight = idx === 9; // e.g. October
                 return (

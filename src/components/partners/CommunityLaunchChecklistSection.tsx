@@ -43,10 +43,10 @@ export function CommunityLaunchChecklistSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Practical Roadmap"
               title="Community Launch Checklist"
@@ -55,10 +55,10 @@ export function CommunityLaunchChecklistSection() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {stages.map((st, idx) => (
             <ScrollReveal key={st.stage} delayMs={idx * 100}>
-              <div className="surface-elevated rounded-3xl p-6 sm:p-7 border border-[#DDE9D8] shadow-2xs h-full flex flex-col justify-between">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-[#DDE9D8] shadow-2xs h-full flex flex-col justify-between">
                 <div>
                   <span className="text-[11px] font-mono font-bold text-[#6F9F73] uppercase tracking-wider block mb-1">
                     {st.stage}

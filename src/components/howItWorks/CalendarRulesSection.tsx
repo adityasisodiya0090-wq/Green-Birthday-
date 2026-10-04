@@ -21,10 +21,10 @@ export function CalendarRulesSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Special Calendar Cases"
               title="What happens when your date isn't in the month?"
@@ -35,16 +35,16 @@ export function CalendarRulesSection() {
 
         {/* Rule Explanation Banner */}
         <ScrollReveal delayMs={100}>
-          <div className="max-w-4xl mx-auto surface-elevated rounded-3xl p-7 sm:p-9 border border-[#DDE9D8] shadow-xs mb-10">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-[#1F4D38] rounded-2xl text-white shrink-0 shadow-xs">
-                <HelpCircle className="w-6 h-6 text-[#8EB892]" />
+          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#DDE9D8] shadow-xs mb-5 sm:mb-8">
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="p-2 sm:p-3 bg-[#1F4D38] rounded-xl sm:rounded-2xl text-white shrink-0 shadow-xs">
+                <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#8EB892]" />
               </div>
-              <div className="space-y-2">
-                <h3 className="font-display font-bold text-xl text-[#1F4D38]">
+              <div className="space-y-1 sm:space-y-2">
+                <h3 className="font-display font-bold text-base sm:text-xl text-[#1F4D38]">
                   The End-of-Month Rule
                 </h3>
-                <p className="text-sm sm:text-base text-[#4D6153] leading-relaxed">
+                <p className="text-xs sm:text-base text-[#4D6153] leading-relaxed">
                   If your Green Day is the <strong>29th, 30th, or 31st</strong> and that date does not exist in a particular month, your Green Day takes place on the <strong>last available day of that month</strong>.
                 </p>
               </div>
@@ -54,7 +54,7 @@ export function CalendarRulesSection() {
 
         {/* Interactive Month-End Matrix */}
         <ScrollReveal delayMs={150}>
-          <div className="max-w-4xl mx-auto surface-glass rounded-3xl p-7 sm:p-10 border border-white/80 shadow-sm">
+          <div className="max-w-4xl mx-auto surface-glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/80 shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#DDE9D8] gap-4">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#6F9F73]">

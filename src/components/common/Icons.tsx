@@ -94,14 +94,88 @@ export const Sprout: React.FC<IconProps> = ({ className }) => (
   </span>
 );
 
-export const Calendar: React.FC<IconProps> = ({ className }) => (
+export const BirthdayCake: React.FC<IconProps> = ({ className }) => (
   <span className={base(className)} aria-hidden="true">
-    <span className="w-3.5 h-3.5 rounded border border-current flex flex-col items-center justify-between p-0.5 relative">
-      <span className="w-full h-1 border-b border-current opacity-60" />
-      <span className="text-[7px] font-mono font-bold leading-none">16</span>
-    </span>
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-full h-full"
+    >
+      {/* Base line */}
+      <line x1="21" y1="77" x2="79" y2="77" />
+
+      {/* Bottom tier */}
+      <rect x="28" y="58" width="44" height="19" rx="3.5" />
+      <path d="M 28 64.5 C 34 61.5, 44 61.5, 50 64.5 C 56 67.5, 66 67.5, 72 64.5" />
+      <path d="M 28 71 C 34 68, 44 68, 50 71 C 56 74, 66 74, 72 71" />
+
+      {/* Top tier */}
+      <rect x="32" y="39" width="36" height="19" rx="3" />
+      <path d="M 32 51.5 C 38 48.5, 44 48.5, 50 51.5 C 56 54.5, 62 54.5, 68 51.5" />
+
+      {/* Dripping frosting on top tier */}
+      <path d="M 32 40 L 32 46.5 C 33.5 49, 36.5 49, 38 46.5 C 39.5 44.5, 42 44.5, 43.5 47.5 C 44.5 49.5, 46.5 49.5, 47.5 47 C 49 44.5, 51 44.5, 52.5 48 C 53.5 50, 56 50, 57 47 C 58.5 44.5, 61 44.5, 62.5 47 C 64 49.5, 66.5 49.5, 68 46.5 L 68 40" />
+
+      {/* Frosting dollops across the top */}
+      <path d="M 32 39 C 33 36, 38 36, 41 39 C 43 36, 48 36, 50 39 C 52 36, 57 36, 59 39 C 62 36, 67 36, 68 39" />
+
+      {/* Left candle */}
+      <rect x="37.5" y="27" width="3.5" height="9" rx="1" />
+      <path d="M 39.25 21.5 C 37.5 23.5, 38 25.5, 39.25 26 C 40.5 25.5, 41 23.5, 39.25 21.5 Z" fill="currentColor" stroke="none" />
+
+      {/* Middle candle */}
+      <rect x="48.25" y="27" width="3.5" height="9" rx="1" />
+      <path d="M 50 21.5 C 48.25 23.5, 48.75 25.5, 50 26 C 51.25 25.5, 51.75 23.5, 50 21.5 Z" fill="currentColor" stroke="none" />
+
+      {/* Right candle */}
+      <rect x="59" y="27" width="3.5" height="9" rx="1" />
+      <path d="M 60.75 21.5 C 59 23.5, 59.5 25.5, 60.75 26 C 62 25.5, 62.5 23.5, 60.75 21.5 Z" fill="currentColor" stroke="none" />
+    </svg>
   </span>
 );
+
+export const Calendar = BirthdayCake;
+export const Cake = BirthdayCake;
+
+export interface BirthdayCakeBadgeProps {
+  className?: string;
+  size?: string;
+  variant?: 'forest' | 'sage' | 'emerald' | 'light';
+  withSprout?: boolean;
+}
+
+export const BirthdayCakeBadge: React.FC<BirthdayCakeBadgeProps> = ({
+  className = '',
+  size = 'w-9 h-9',
+  variant = 'forest',
+  withSprout = false,
+}) => {
+  const bgClasses = {
+    forest: 'bg-[#1F4D38] text-white border-[#153929]',
+    sage: 'bg-[#5FA368] text-white border-[#478250]',
+    emerald: 'bg-[#4CAF50] text-white border-[#388E3C]',
+    light: 'bg-[#FFFDF7] text-[#1F4D38] border-[#DDE9D8]',
+  };
+
+  return (
+    <span
+      className={`relative inline-flex items-center justify-center rounded-full shrink-0 select-none shadow-xs border transition-transform ${bgClasses[variant]} ${size} ${className}`}
+      aria-hidden="true"
+    >
+      <BirthdayCake className="w-[72%] h-[72%]" />
+      {withSprout && (
+        <span
+          className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-tr-full rounded-bl-full bg-[#8EB892] border border-[#153929]/40 transform rotate-12 shadow-2xs"
+          aria-hidden="true"
+        />
+      )}
+    </span>
+  );
+};
 
 export const CalendarCheck: React.FC<IconProps> = ({ className }) => (
   <span className={base(className)} aria-hidden="true">

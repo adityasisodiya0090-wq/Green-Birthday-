@@ -25,7 +25,7 @@ export function DateSproutVisual({
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] flex flex-col items-center justify-center select-none animate-hero-center py-1 sm:py-2">
+    <div className="relative mx-auto w-full max-w-[250px] xs:max-w-[275px] sm:max-w-[320px] md:max-w-[360px] flex flex-col items-center justify-center select-none animate-hero-center py-1 sm:py-2">
       {/* Background ambient radial glow: Pure CSS subtle diffused atmosphere */}
       <div
         className={`absolute inset-2 sm:inset-4 rounded-full bg-radial from-[#DDE9D8]/70 via-[#6F9F73]/15 to-transparent blur-2xl pointer-events-none transition-opacity duration-500 ${
@@ -36,7 +36,7 @@ export function DateSproutVisual({
 
       {/* Main Glass Visual Container - 100% SVG Free */}
       <div
-        className={`relative w-full rounded-3xl surface-glass p-4 sm:p-6 flex flex-col items-center justify-between overflow-hidden shadow-md transition-all duration-300 border border-[#DDE9D8]/80 ${
+        className={`relative w-full rounded-2xl sm:rounded-3xl surface-glass p-3.5 sm:p-6 flex flex-col items-center justify-between overflow-hidden shadow-md transition-all duration-300 border border-[#DDE9D8]/80 ${
           isHovered ? 'shadow-xl shadow-[#1F4D38]/10 border-white' : ''
         }`}
       >
@@ -48,7 +48,7 @@ export function DateSproutVisual({
         </div>
 
         {/* Top Header Tag */}
-        <div className="w-full flex items-center justify-between text-[10px] sm:text-xs font-semibold tracking-wider text-[#4D6153] uppercase z-10 pb-2">
+        <div className="w-full flex items-center justify-between text-[10px] sm:text-xs font-semibold tracking-wider text-[#4D6153] uppercase z-10 pb-1.5 sm:pb-2">
           <span className="flex items-center gap-1.5 text-[10px] sm:text-xs font-bold text-[#1F4D38]">
             <Calendar className="w-3 h-3 text-[#6F9F73]" />
             Monthly Rhythm
@@ -60,7 +60,7 @@ export function DateSproutVisual({
 
         {/* Center Date & Emergent Sprout Composition */}
         <div
-          className="relative flex flex-col items-center justify-center my-2 sm:my-3 z-10 cursor-pointer group"
+          className="relative flex flex-col items-center justify-center my-1.5 sm:my-3 z-10 cursor-pointer group"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered(true)}
@@ -70,7 +70,7 @@ export function DateSproutVisual({
         >
           {/* Main Round Date Vessel with pure CSS depth */}
           <div
-            className={`relative w-36 h-36 sm:w-44 sm:h-44 rounded-full flex items-center justify-center bg-gradient-to-b from-[#FFFDF7] to-[#F7F3E8] border-2 transition-all duration-300 ${
+            className={`relative w-30 h-30 xs:w-36 xs:h-36 sm:w-44 sm:h-44 rounded-full flex items-center justify-center bg-gradient-to-b from-[#FFFDF7] to-[#F7F3E8] border-2 transition-all duration-300 ${
               isHovered
                 ? 'border-[#6F9F73] shadow-md shadow-[#1F4D38]/10 scale-[1.02]'
                 : 'border-[#DDE9D8] shadow-inner shadow-[#1F4D38]/5'
@@ -78,38 +78,38 @@ export function DateSproutVisual({
           >
             {/* Outer focus dashed ring */}
             <div
-              className={`absolute -inset-2 rounded-full border border-dashed transition-all duration-300 pointer-events-none ${
+              className={`absolute -inset-1.5 xs:-inset-2 rounded-full border border-dashed transition-all duration-300 pointer-events-none ${
                 isHovered ? 'border-[#1F4D38]/40 scale-105' : 'border-[#6F9F73]/25'
               }`}
             />
 
             {/* Emergent Botanical Sprout Leaf (Pure CSS Geometry: Zero SVG) */}
             <div
-              className={`absolute -top-3.5 right-2 sm:right-3 transition-transform duration-300 ${
+              className={`absolute -top-3 right-1.5 xs:right-2 sm:right-3 transition-transform duration-300 ${
                 isHovered ? 'rotate-12 scale-110' : ''
               }`}
               aria-hidden="true"
             >
-              <div className="relative w-8 h-8 flex items-center justify-center">
+              <div className="relative w-7 h-7 xs:w-8 xs:h-8 flex items-center justify-center">
                 {/* Main curved leaf */}
-                <div className="w-5 h-5 rounded-tr-full rounded-bl-full bg-[#6F9F73] border-2 border-[#1F4D38] transform -rotate-45 shadow-xs" />
+                <div className="w-4 h-4 xs:w-5 xs:h-5 rounded-tr-full rounded-bl-full bg-[#6F9F73] border-2 border-[#1F4D38] transform -rotate-45 shadow-xs" />
                 {/* Smaller tender leaflet */}
-                <div className="absolute top-1 left-0 w-3 h-3 rounded-tl-full rounded-br-full bg-[#8EB892] border border-[#1F4D38] transform rotate-12" />
+                <div className="absolute top-1 left-0 w-2.5 h-2.5 xs:w-3 xs:h-3 rounded-tl-full rounded-br-full bg-[#8EB892] border border-[#1F4D38] transform rotate-12" />
                 {/* Stem line */}
-                <div className="absolute bottom-0 left-3 w-1 h-3 bg-[#1F4D38] rounded-full" />
+                <div className="absolute bottom-0 left-2.5 xs:left-3 w-0.5 xs:w-1 h-2.5 xs:h-3 bg-[#1F4D38] rounded-full" />
               </div>
             </div>
 
             {/* Central Date Numeral and Typography */}
             <div className="flex flex-col items-center text-center">
-              <span className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-[#1F4D38] tabular-nums leading-none drop-shadow-2xs">
+              <span className="font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter text-[#1F4D38] tabular-nums leading-none drop-shadow-2xs">
                 {selectedDay}
               </span>
-              <span className="mt-1.5 text-[10px] sm:text-xs font-extrabold tracking-widest uppercase text-[#6F9F73]">
+              <span className="mt-1 xs:mt-1.5 text-[9px] xs:text-[10px] sm:text-xs font-extrabold tracking-widest uppercase text-[#6F9F73]">
                 EVERY {getOrdinalSuffix(selectedDay).toUpperCase()}
               </span>
               <span
-                className={`text-[9px] sm:text-[10px] uppercase tracking-wider mt-0.5 transition-colors duration-200 ${
+                className={`text-[8px] xs:text-[9px] sm:text-[10px] uppercase tracking-wider mt-0.5 transition-colors duration-200 ${
                   isHovered ? 'text-[#1F4D38] font-bold underline decoration-[#6F9F73]' : 'text-[#1C2821] font-semibold opacity-90'
                 }`}
               >

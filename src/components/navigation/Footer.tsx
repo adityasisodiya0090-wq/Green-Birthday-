@@ -6,20 +6,20 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#153929] text-[#DDE9D8] border-t border-[#1F4D38] pt-8 sm:pt-14 pb-[max(2rem,var(--sab))]">
+    <footer className="bg-[#153929] text-[#DDE9D8] border-t border-[#1F4D38] pt-6 sm:pt-12 pb-[max(1.5rem,var(--sab))]">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10 pb-6 sm:pb-12 border-b border-[#1F4D38]/80">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 pb-5 sm:pb-10 border-b border-[#1F4D38]/80">
           {/* Brand info */}
-          <div className="sm:col-span-2 space-y-2.5 sm:space-y-4">
+          <div className="sm:col-span-2 space-y-2 sm:space-y-3.5">
             <Logo variant="light" size="sm" className="sm:hidden" />
             <Logo variant="light" size="md" className="hidden sm:inline-flex" />
-            <p className="text-xs sm:text-sm font-medium text-[#8EB892] tracking-wide uppercase">
+            <p className="text-[11px] sm:text-xs font-semibold text-[#8EB892] tracking-wider uppercase">
               A community environmental initiative.
             </p>
             <p className="text-xs sm:text-sm text-[#DDE9D8]/80 max-w-md leading-relaxed">
               Your birthday gave you a date. Give that date a purpose. Turning personal birth dates into recurring monthly Green Days of planting and nurturing.
             </p>
-            <div className="pt-1">
+            <div className="pt-0.5">
               <span className="inline-block text-[10px] sm:text-xs font-semibold tracking-wider text-[#8EB892] uppercase">
                 Plant · Nurture · Repeat
               </span>
@@ -28,10 +28,10 @@ export function Footer() {
 
           {/* Primary Navigation */}
           <div>
-            <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#8EB892] mb-2 sm:mb-4">
+            <h4 className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#8EB892] mb-1.5 sm:mb-3">
               Explore
             </h4>
-            <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
+            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/" className="hover:text-white transition-colors">
                   Home

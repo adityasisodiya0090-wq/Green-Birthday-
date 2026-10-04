@@ -10,10 +10,10 @@ export function FindGreenDayPreview() {
   const { savedDay } = useGreenDay();
 
   return (
-    <section id="find-green-day" className="py-18 sm:py-26 surface-base relative scroll-mt-16">
+    <section id="find-green-day" className="py-8 sm:py-16 lg:py-20 surface-base relative scroll-mt-16">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-10">
             <SectionHeading
               eyebrow="Interactive Discovery"
               title={savedDay ? 'My Green Day Journey' : 'Find your Green Day'}
@@ -28,7 +28,7 @@ export function FindGreenDayPreview() {
 
         {/* If local state exists: show Personal Green Day Card & Journey */}
         {savedDay ? (
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
             <ScrollReveal delayMs={50}>
               <PersonalGreenDayCard />
             </ScrollReveal>

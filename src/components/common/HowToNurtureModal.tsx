@@ -88,26 +88,26 @@ export function HowToNurtureModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="nurture-modal-title"
     >
       <div
         ref={modalRef}
-        className="w-full max-w-2xl surface-elevated rounded-3xl p-6 sm:p-8 border border-[#DDE9D8] shadow-2xl relative animate-hero-center my-8 max-h-[90vh] overflow-y-auto"
+        className="w-full max-w-2xl surface-elevated rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#DDE9D8] shadow-2xl relative animate-hero-center my-auto max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-3rem)] overflow-y-auto pb-[var(--sab)]"
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-[#DDE9D8] mb-6">
+        <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-[#DDE9D8] mb-4 sm:mb-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#DDE9D8] flex items-center justify-center text-[#1F4D38]">
-              <Heart className="w-5 h-5 text-[#1F4D38]" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#DDE9D8] flex items-center justify-center text-[#1F4D38] shrink-0">
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-[#1F4D38]" />
             </div>
             <div>
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#6F9F73] block">
+              <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-[#6F9F73] block">
                 STEWARDSHIP GUIDE
               </span>
-              <h3 id="nurture-modal-title" className="font-display font-extrabold text-xl sm:text-2xl text-[#1F4D38]">
+              <h3 id="nurture-modal-title" className="font-display font-extrabold text-lg sm:text-2xl text-[#1F4D38]">
                 How to Nurture What You Plant
               </h3>
             </div>
@@ -116,7 +116,7 @@ export function HowToNurtureModal() {
           <button
             type="button"
             onClick={closeNurtureModal}
-            className="w-8 h-8 rounded-full bg-[#DDE9D8]/50 hover:bg-[#DDE9D8] text-[#1F4D38] flex items-center justify-center transition-colors cursor-pointer"
+            className="w-8 h-8 rounded-full bg-[#DDE9D8]/50 hover:bg-[#DDE9D8] text-[#1F4D38] flex items-center justify-center transition-colors cursor-pointer min-w-[36px] min-h-[36px]"
             aria-label="Close nurture guide"
           >
             <X className="w-4 h-4" />

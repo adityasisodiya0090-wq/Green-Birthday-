@@ -2,7 +2,7 @@ import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 import { ScrollReveal } from '../common/ScrollReveal';
 import { useRouter } from '../../context/RouterContext';
-import { ArrowRight, ChevronDown, Sparkles, BookOpen } from '../common/Icons';
+import { ArrowRight, ChevronDown, Sparkles, BookOpen, BirthdayCake } from '../common/Icons';
 
 export function PartnersHero() {
   const { navigate } = useRouter();
@@ -15,7 +15,7 @@ export function PartnersHero() {
   };
 
   return (
-    <section className="relative pt-10 pb-16 sm:pt-16 sm:pb-22 overflow-hidden border-b border-[#DDE9D8]/80">
+    <section className="relative pt-6 pb-8 sm:pt-12 sm:pb-16 overflow-hidden border-b border-[#DDE9D8]/80">
       {/* Background subconscious lighting */}
       <div
         className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[400px] bg-gradient-to-b from-[#DDE9D8]/50 via-[#F7F3E8]/30 to-transparent blur-3xl -z-10"
@@ -23,44 +23,46 @@ export function PartnersHero() {
       />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
           {/* Left Column: Headline and CTAs */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-left">
             <ScrollReveal>
-              <div className="text-xs sm:text-sm font-bold tracking-widest text-[#6F9F73] uppercase flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#1F4D38]" />
+              <div className="text-[11px] sm:text-xs font-bold tracking-widest text-[#6F9F73] uppercase flex items-center gap-1.5 sm:gap-2">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1F4D38]" />
                 <span>GROW WITH US</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delayMs={100}>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F4D38] tracking-tight leading-[1.14] [text-wrap:balance]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F4D38] tracking-tight leading-tight [text-wrap:balance]">
                 Bring Birthday Green to your community.
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delayMs={200}>
-              <p className="text-base sm:text-xl text-[#4D6153] leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-lg text-[#4D6153] leading-relaxed max-w-xl">
                 «Schools, colleges, housing societies, NGOs, environmental groups and community organizations can help more people turn a personal date into a recurring environmental action.»
               </p>
             </ScrollReveal>
 
             <ScrollReveal delayMs={300}>
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <Button
                   variant="primary"
-                  size="lg"
+                  size="md"
                   onClick={handleScrollToForm}
                   icon={<ChevronDown className="w-4 h-4" />}
+                  className="w-full sm:w-auto"
                 >
                   Bring Birthday Green to Us →
                 </Button>
 
                 <Button
                   variant="secondary"
-                  size="lg"
+                  size="md"
                   onClick={() => navigate('/how-it-works')}
                   icon={<ArrowRight className="w-4 h-4" />}
+                  className="w-full sm:w-auto"
                 >
                   See How It Works
                 </Button>
@@ -77,7 +79,7 @@ export function PartnersHero() {
                 </button>
               </div>
 
-              <p className="text-xs text-[#7A8E80] pt-1">
+              <p className="text-[11px] sm:text-xs text-[#7A8E80] pt-1">
                 Zero commercial fees · Privacy-first participant model · Open civic framework
               </p>
             </ScrollReveal>
@@ -86,7 +88,7 @@ export function PartnersHero() {
           {/* Right Column: Abstract community panels converging into organic roots & canopy */}
           <div className="lg:col-span-5 flex justify-center">
             <ScrollReveal delayMs={150}>
-              <div className="relative w-72 h-72 sm:w-84 sm:h-84 surface-glass rounded-3xl p-6 flex flex-col items-center justify-between text-center shadow-lg shadow-[#1F4D38]/6 border border-white/80 overflow-hidden">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 surface-glass rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col items-center justify-between text-center shadow-lg shadow-[#1F4D38]/6 border border-white/80 overflow-hidden">
                 {/* Pure HTML/CSS Community Nodes (Zero SVG) */}
                 <div className="relative w-full h-44 flex flex-col items-center justify-between p-2" aria-hidden="true">
                   {/* Top row: School & Society */}
@@ -101,9 +103,8 @@ export function PartnersHero() {
 
                   {/* Center Convergence Badge */}
                   <div className="relative flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#1F4D38] text-white flex flex-col items-center justify-center shadow-md border-2 border-[#DDE9D8]">
-                      <span className="text-xs font-bold leading-none">16</span>
-                      <span className="text-[8px] opacity-80 leading-none">🌱</span>
+                    <div className="w-12 h-12 rounded-full bg-[#52AB62] text-white flex items-center justify-center shadow-md border-2 border-[#DDE9D8]">
+                      <BirthdayCake className="w-8 h-8 text-white" />
                     </div>
                   </div>
 

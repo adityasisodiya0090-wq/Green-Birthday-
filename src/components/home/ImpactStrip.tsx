@@ -28,7 +28,7 @@ export function ImpactStrip() {
   }
 
   return (
-    <section className="relative py-10 surface-canvas border-y border-[#DDE9D8]/80 shadow-xs">
+    <section className="relative py-6 sm:py-10 surface-canvas border-y border-[#DDE9D8]/80 shadow-xs">
       <Container>
         <ScrollReveal>
           {isLoading ? (

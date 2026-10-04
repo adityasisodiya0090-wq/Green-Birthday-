@@ -41,10 +41,10 @@ export function CommunityPreviewSection() {
   const activityDays = [4, 12, 16, 22, 28];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative">
       <Container>
         <ScrollReveal>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-12">
             <SectionHeading
               align="left"
               eyebrow="Community Activity"
@@ -62,36 +62,36 @@ export function CommunityPreviewSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 items-start">
           {/* Left Column: Recent Planting Updates (Privacy-First Stream) */}
           <div className="lg:col-span-7">
             <ScrollReveal delayMs={100}>
-              <div className="surface-elevated rounded-3xl p-6 sm:p-8 shadow-xs">
-                <div className="flex items-center justify-between pb-4 border-b border-[#DDE9D8]">
-                  <h3 className="font-display font-bold text-lg text-[#1F4D38]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 shadow-xs">
+                <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-[#DDE9D8]">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                     Recent Planting Updates
                   </h3>
-                  <span className="text-xs font-semibold text-[#6F9F73] uppercase tracking-wider">
+                  <span className="text-[10px] sm:text-xs font-semibold text-[#6F9F73] uppercase tracking-wider">
                     Privacy-First Stream
                   </span>
                 </div>
 
-                <div className="mt-4 divide-y divide-[#DDE9D8]/60">
+                <div className="mt-3 sm:mt-4 divide-y divide-[#DDE9D8]/60">
                   {sampleActivities.map((act) => (
-                    <div key={act.id} className="py-4 first:pt-2 last:pb-0 flex items-start justify-between gap-4">
-                      <div className="space-y-1">
-                        <div className="flex items-center gap-2 text-sm font-semibold text-[#1F4D38]">
-                          <CheckCircle2 className="w-4 h-4 text-[#6F9F73] shrink-0" />
+                    <div key={act.id} className="py-3 sm:py-4 first:pt-1 sm:first:pt-2 last:pb-0 flex items-start justify-between gap-3 sm:gap-4">
+                      <div className="space-y-0.5 sm:space-y-1">
+                        <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-[#1F4D38]">
+                          <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#6F9F73] shrink-0" />
                           <span>{act.title}</span>
                         </div>
-                        <div className="text-xs text-[#4D6153] pl-6">
+                        <div className="text-[11px] sm:text-xs text-[#4D6153] pl-5 sm:pl-6">
                           {act.actionType}
                         </div>
                       </div>
 
                       <div className="text-right shrink-0">
-                        <div className="text-xs font-semibold text-[#1F4D38] flex items-center justify-end gap-1">
-                          <Calendar className="w-3.5 h-3.5 text-[#6F9F73]" />
+                        <div className="text-[11px] sm:text-xs font-semibold text-[#1F4D38] flex items-center justify-end gap-1">
+                          <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#6F9F73]" />
                           <span>{act.date}</span>
                         </div>
                       </div>
@@ -99,8 +99,8 @@ export function CommunityPreviewSection() {
                   ))}
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#DDE9D8] text-xs text-[#7A8E80] flex items-start gap-2">
-                  <Info className="w-4 h-4 text-[#6F9F73] shrink-0 mt-0.5" />
+                <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-[#DDE9D8] text-[11px] sm:text-xs text-[#7A8E80] flex items-start gap-2">
+                  <Info className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#6F9F73] shrink-0 mt-0.5" />
                   <span>
                     Privacy protection: All updates are anonymized. No personal profiles, phone numbers, or exact addresses are ever collected or displayed.
                   </span>
@@ -112,20 +112,20 @@ export function CommunityPreviewSection() {
           {/* Right Column: Section 21 Community Calendar Preview */}
           <div className="lg:col-span-5">
             <ScrollReveal delayMs={200}>
-              <div className="surface-elevated rounded-3xl p-6 sm:p-8 shadow-xs">
-                <div className="flex items-center justify-between pb-4 border-b border-[#DDE9D8]">
-                  <h3 className="font-display font-bold text-lg text-[#1F4D38]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 shadow-xs">
+                <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-[#DDE9D8]">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                     Community Calendar
                   </h3>
-                  <span className="text-xs text-[#4D6153]">31-Day Grid</span>
+                  <span className="text-[11px] sm:text-xs text-[#4D6153]">31-Day Grid</span>
                 </div>
 
-                <p className="mt-4 text-xs text-[#4D6153] leading-relaxed">
+                <p className="mt-3 sm:mt-4 text-[11px] sm:text-xs text-[#4D6153] leading-relaxed">
                   Every day of the month is someone’s Green Day. Click any date to preview its monthly cycle:
                 </p>
 
                 {/* 31-Day Interactive Grid */}
-                <div className="mt-4 grid grid-cols-7 gap-1.5 p-3 tactile-control-inset rounded-2xl">
+                <div className="mt-3 sm:mt-4 grid grid-cols-7 gap-1 sm:gap-1.5 p-2 sm:p-3 tactile-control-inset rounded-xl sm:rounded-2xl">
                   {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => {
                     const isSelected = selectedCalendarDay === d;
                     const isCurrent = todayDate === d;
@@ -143,7 +143,7 @@ export function CommunityPreviewSection() {
                         key={d}
                         type="button"
                         onClick={() => setSelectedCalendarDay(d)}
-                        className={`aspect-square relative flex flex-col items-center justify-center rounded-lg text-xs font-bold transition-all duration-150 cursor-pointer ${stateClasses}`}
+                        className={`aspect-square relative flex flex-col items-center justify-center rounded-lg text-[11px] sm:text-xs font-bold transition-all duration-150 cursor-pointer ${stateClasses}`}
                         title={`Day ${d}${isCurrent ? ' (Today)' : ''}${hasActivity ? ' (Community Green Day)' : ''}`}
                       >
                         <span>{d}</span>
@@ -157,7 +157,7 @@ export function CommunityPreviewSection() {
                 </div>
 
                 {/* Calendar State Legend */}
-                <div className="mt-4 pt-3 border-t border-[#DDE9D8]/60 grid grid-cols-2 gap-2 text-[11px] text-[#4D6153]">
+                <div className="mt-3 sm:mt-4 pt-3 border-t border-[#DDE9D8]/60 grid grid-cols-2 gap-2 text-[10px] sm:text-[11px] text-[#4D6153]">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-sm bg-[#1F4D38]" />
                     <span>Selected ({getOrdinalSuffix(selectedCalendarDay)})</span>
@@ -176,7 +176,7 @@ export function CommunityPreviewSection() {
                   </div>
                 </div>
 
-                <div className="mt-4 text-center">
+                <div className="mt-3 sm:mt-4 text-center">
                   <button
                     onClick={() => openCalculator(selectedCalendarDay)}
                     className="text-xs font-semibold text-[#1F4D38] hover:text-[#6F9F73] underline transition-colors cursor-pointer"

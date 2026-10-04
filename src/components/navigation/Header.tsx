@@ -37,10 +37,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full h-13 sm:h-16 lg:h-18 transition-all duration-200 ${
+        className={`sticky top-0 z-40 w-full h-12 sm:h-16 lg:h-18 transition-all duration-200 ${
           isScrolled
-            ? 'surface-glass shadow-xs border-b border-[#DDE9D8]/90 backdrop-blur-md'
-            : 'bg-[#FFFDF7]/90 backdrop-blur-xs border-b border-[#DDE9D8]/50'
+            ? 'surface-glass shadow-2xs border-b border-[#DDE9D8]/90 backdrop-blur-md'
+            : 'bg-[#FFFDF7]/95 backdrop-blur-xs border-b border-[#DDE9D8]/50'
         }`}
       >
         <div className="max-w-7xl mx-auto h-full px-3 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -75,7 +75,7 @@ export function Header() {
           </nav>
 
           {/* Zone 3: Primary actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Button
               variant="primary"
               size="sm"
@@ -95,10 +95,10 @@ export function Header() {
             {/* Mobile / Tablet menu trigger */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#1F4D38] hover:bg-[#DDE9D8]/60 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer"
+              className="lg:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#1F4D38] hover:bg-[#DDE9D8]/60 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer -mr-1"
               aria-label="Open navigation menu"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>

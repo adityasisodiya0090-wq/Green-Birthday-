@@ -48,10 +48,10 @@ export function FiveStepActivationSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Community Sequence"
               title="The Five-Step Activation Model"
@@ -60,7 +60,7 @@ export function FiveStepActivationSection() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 mb-14">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-5 mb-8 sm:mb-14">
           {steps.map((st, idx) => (
             <ScrollReveal key={st.step} delayMs={idx * 60}>
               <div className="surface-elevated rounded-3xl p-5 sm:p-6 border border-[#DDE9D8] h-full flex flex-col justify-between shadow-2xs hover:border-[#6F9F73] transition-all">

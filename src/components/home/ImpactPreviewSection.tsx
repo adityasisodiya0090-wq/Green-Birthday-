@@ -10,10 +10,10 @@ export function ImpactPreviewSection() {
   const { summary, isLoading } = useImpact();
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-12">
             <SectionHeading
               align="left"
               eyebrow="Measurable Growth"
@@ -33,15 +33,15 @@ export function ImpactPreviewSection() {
 
         {/* Dashboard Preview Surface (Level 2 Elevated Surface) */}
         <ScrollReveal delayMs={150}>
-          <div className="surface-elevated rounded-3xl p-6 sm:p-10 shadow-sm">
+          <div className="surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 shadow-sm">
             {isLoading ? (
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 animate-pulse">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 animate-pulse">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-32 rounded-2xl bg-[#DDE9D8]/30" />
+                  <div key={i} className="h-28 sm:h-32 rounded-xl sm:rounded-2xl bg-[#DDE9D8]/30" />
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6">
                 <ImpactCounter
                   label="Trees & Saplings Planted"
                   value={summary.treesPlanted}

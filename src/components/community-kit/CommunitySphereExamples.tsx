@@ -1,7 +1,7 @@
 import { Container } from '../common/Container';
 import { SectionHeading } from '../common/SectionHeading';
 import { ScrollReveal } from '../common/ScrollReveal';
-import { GraduationCap, Home, TreePine, Building2, ShieldCheck, AlertCircle } from '../common/Icons';
+import { GraduationCap, Home, TreePine, Building2 } from '../common/Icons';
 
 export function CommunitySphereExamples() {
   const spheres = [
@@ -32,10 +32,10 @@ export function CommunitySphereExamples() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Practical Scenarios"
               title="How Different Communities Use It"
@@ -44,10 +44,10 @@ export function CommunitySphereExamples() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {spheres.map((s, idx) => (
             <ScrollReveal key={s.type} delayMs={idx * 80}>
-              <div className="surface-elevated rounded-3xl p-7 sm:p-8 border border-[#DDE9D8] shadow-2xs h-full flex flex-col justify-between">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#DDE9D8] shadow-2xs h-full flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#DDE9D8]/70 flex items-center justify-center">
@@ -75,19 +75,6 @@ export function CommunitySphereExamples() {
             </ScrollReveal>
           ))}
         </div>
-
-        {/* Section 19: Activation without Formal Partnership Disclaimer */}
-        <ScrollReveal delayMs={300}>
-          <div className="max-w-4xl mx-auto p-5 sm:p-6 rounded-3xl bg-[#F7F3E8] border border-[#DDE9D8] flex items-start gap-3.5 text-xs text-[#4D6153] leading-relaxed">
-            <AlertCircle className="w-5 h-5 text-[#6F9F73] shrink-0 mt-0.5" />
-            <div>
-              <strong className="text-[#1F4D38] block font-bold mb-1">
-                Informal Community Activation vs. Formal Reached Communities:
-              </strong>
-              Any individual or coordinator is free to share Birthday Green public materials and activate their group right now. Doing so is voluntary and does not automatically classify the group as an official reached community or alter our verified baseline of 0 Communities Reached. Formal collaborations are facilitated separately through our partnership pathway.
-            </div>
-          </div>
-        </ScrollReveal>
       </Container>
     </section>
   );

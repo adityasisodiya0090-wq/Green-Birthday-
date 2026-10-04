@@ -82,10 +82,10 @@ export function CommunityCalendar() {
   const activeDayDetails = selectedDay ? monthData[selectedDay] : null;
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Interactive Calendar"
               title="See the community show up."
@@ -95,7 +95,7 @@ export function CommunityCalendar() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={150}>
-          <div className="max-w-4xl mx-auto surface-glass rounded-3xl p-4 sm:p-8 border border-white/90 shadow-md">
+          <div className="max-w-4xl mx-auto surface-glass rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 border border-white/90 shadow-md">
             {/* Calendar Controls & Month Title */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 sm:pb-6 mb-4 sm:mb-6 border-b border-[#DDE9D8] gap-3">
               <div>

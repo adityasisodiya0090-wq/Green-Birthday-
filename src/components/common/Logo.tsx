@@ -1,4 +1,5 @@
 import { Link } from '../../context/RouterContext';
+import { BirthdayCake } from './Icons';
 
 interface LogoProps {
   className?: string;
@@ -9,9 +10,9 @@ interface LogoProps {
 
 export function Logo({ className = '', iconOnly = false, size = 'md', variant = 'dark' }: LogoProps) {
   const iconSizes = {
-    sm: 'w-7 h-7 text-xs',
-    md: 'w-9 h-9 text-sm',
-    lg: 'w-11 h-11 text-base',
+    sm: 'w-7 h-7',
+    md: 'w-8.5 h-8.5',
+    lg: 'w-10 h-10',
   };
 
   const textSizes = {
@@ -28,26 +29,19 @@ export function Logo({ className = '', iconOnly = false, size = 'md', variant = 
       className={`inline-flex items-center gap-2.5 group transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] rounded-md ${className}`}
       aria-label="Birthday Green Home"
     >
-      {/* Date + Sprout visual symbol */}
+      {/* Birthday Cake Badge (matches uploaded icon to suit the theme) */}
       <span
-        className={`relative flex items-center justify-center font-display font-bold rounded-lg border transition-transform group-hover:scale-105 shrink-0 ${iconSizes[size]} ${
+        className={`relative flex items-center justify-center rounded-full border transition-transform group-hover:scale-105 shrink-0 ${iconSizes[size]} ${
           isLight
-            ? 'bg-[#FFFDF7]/15 border-white/30 text-white'
-            : 'bg-[#1F4D38] border-[#153929] text-[#FFFDF7] shadow-xs'
+            ? 'bg-[#FFFDF7]/20 border-white/40 text-white shadow-xs'
+            : 'bg-[#52AB62] border-[#388E3C] text-white shadow-xs'
         }`}
       >
-        {/* Calendar top binder bar */}
-        <span className="absolute -top-1 inset-x-1.5 flex justify-between">
-          <span className={`w-0.5 h-1 rounded-full ${isLight ? 'bg-[#DDE9D8]' : 'bg-[#6F9F73]'}`} />
-          <span className={`w-0.5 h-1 rounded-full ${isLight ? 'bg-[#DDE9D8]' : 'bg-[#6F9F73]'}`} />
-        </span>
-
-        {/* Date numeral */}
-        <span className="leading-none pt-0.5 tracking-tighter">16</span>
+        <BirthdayCake className="w-[72%] h-[72%]" />
 
         {/* Emergent sprout leaf pure CSS shape nestled on the corner */}
         <span
-          className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-tr-full rounded-bl-full bg-[#6F9F73] border border-[#153929]/50 transform rotate-12 shadow-2xs"
+          className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-tr-full rounded-bl-full bg-[#8EB892] border border-[#153929]/40 transform rotate-12 shadow-2xs"
           aria-hidden="true"
         />
       </span>

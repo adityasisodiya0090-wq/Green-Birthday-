@@ -14,10 +14,10 @@ export function ImpactCalendar({ calendarCounts }: ImpactCalendarProps) {
   const activeCount = calendarCounts[selectedDay] || 0;
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Monthly Distribution"
               title="Community Activity Across Dates"
@@ -27,20 +27,20 @@ export function ImpactCalendar({ calendarCounts }: ImpactCalendarProps) {
         </ScrollReveal>
 
         <ScrollReveal delayMs={150}>
-          <div className="max-w-4xl mx-auto surface-elevated rounded-3xl p-6 sm:p-10 border border-[#DDE9D8] shadow-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#DDE9D8] gap-4">
+          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 border border-[#DDE9D8] shadow-xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 sm:pb-6 border-b border-[#DDE9D8] gap-3 sm:gap-4">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#6F9F73]">
+                <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#6F9F73]">
                   31 Days of Distributed Care
                 </span>
-                <h4 className="font-display font-bold text-xl text-[#1F4D38]">
+                <h4 className="font-display font-bold text-base sm:text-xl text-[#1F4D38]">
                   Select any date to see community momentum:
                 </h4>
               </div>
 
               {/* Day focus chip */}
-              <div className="surface-glass-forest px-4 py-2 rounded-2xl flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#8EB892]" />
+              <div className="surface-glass-forest px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl flex items-center gap-2 w-fit">
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8EB892]" />
                 <span className="text-xs font-bold text-white">
                   {getOrdinalSuffix(selectedDay)}: {activeCount} {activeCount === 1 ? 'activity' : 'activities'}
                 </span>
@@ -48,7 +48,7 @@ export function ImpactCalendar({ calendarCounts }: ImpactCalendarProps) {
             </div>
 
             {/* 31-Day Grid */}
-            <div className="mt-8 grid grid-cols-4 sm:grid-cols-7 lg:grid-cols-11 gap-2 p-3 tactile-control-inset rounded-2xl">
+            <div className="mt-4 sm:mt-8 grid grid-cols-4 sm:grid-cols-7 lg:grid-cols-11 gap-1.5 sm:gap-2 p-2 sm:p-3 tactile-control-inset rounded-xl sm:rounded-2xl">
               {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => {
                 const count = calendarCounts[d] || 0;
                 const isSelected = selectedDay === d;

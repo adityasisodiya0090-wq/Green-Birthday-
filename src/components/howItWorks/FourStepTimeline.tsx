@@ -40,10 +40,10 @@ export function FourStepTimeline() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="The Four-Step Practice"
               title="The Green Day Cycle"
@@ -53,30 +53,30 @@ export function FourStepTimeline() {
         </ScrollReveal>
 
         {/* Timeline Visualization: Desktop Horizontal / Mobile Vertical */}
-        <div className="relative my-8">
+        <div className="relative my-4 sm:my-8">
           {/* Desktop Connecting Line */}
           <div
             className="hidden lg:block absolute top-[34px] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#1F4D38] via-[#6F9F73] to-[#8EB892] -z-0"
             aria-hidden="true"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-6 relative z-10">
             {steps.map((step, idx) => (
               <ScrollReveal key={step.num} delayMs={idx * 100}>
                 <div className="flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group h-full">
                   {/* Timeline Milestone Marker */}
-                  <div className="flex flex-col items-center mr-5 lg:mr-0 lg:mb-6 shrink-0">
-                    <div className="w-16 h-16 rounded-2xl bg-[#FFFDF7] border-2 border-[#1F4D38] shadow-sm flex items-center justify-center font-display font-extrabold text-xl text-[#1F4D38] group-hover:bg-[#1F4D38] group-hover:text-white transition-all duration-200">
+                  <div className="flex flex-col items-center mr-3 sm:mr-5 lg:mr-0 lg:mb-6 shrink-0">
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-[#FFFDF7] border-2 border-[#1F4D38] shadow-sm flex items-center justify-center font-display font-extrabold text-sm sm:text-xl text-[#1F4D38] group-hover:bg-[#1F4D38] group-hover:text-white transition-all duration-200">
                       {step.num}
                     </div>
                     {/* Mobile vertical line connector */}
                     {idx < steps.length - 1 && (
-                      <div className="lg:hidden w-0.5 h-20 bg-[#DDE9D8] my-1" aria-hidden="true" />
+                      <div className="lg:hidden w-0.5 h-10 sm:h-20 bg-[#DDE9D8] my-1" aria-hidden="true" />
                     )}
                   </div>
 
                   {/* Step Card Container */}
-                  <div className="flex-1 surface-elevated rounded-3xl p-6 sm:p-7 border border-[#DDE9D8] group-hover:border-[#6F9F73] transition-all flex flex-col justify-between h-full shadow-xs">
+                  <div className="flex-1 surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-7 border border-[#DDE9D8] group-hover:border-[#6F9F73] transition-all flex flex-col justify-between h-full shadow-xs">
                     <div>
                       <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#6F9F73] block mb-1">
                         Phase 0{idx + 1}

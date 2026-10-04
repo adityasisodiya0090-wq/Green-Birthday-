@@ -32,13 +32,13 @@ export function ImpactPage() {
       <ImpactHero onOpenReportModal={() => setIsReportModalOpen(true)} />
 
       {/* 02 — Live Impact Counters (Four Primary Metrics) */}
-      <section className="py-14 sm:py-20 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-6 sm:py-16 surface-canvas border-b border-[#DDE9D8]/80">
         <Container>
           <ScrollReveal>
             <div className="max-w-5xl mx-auto">
               {/* Error banner with retry if data fails */}
               {error && (
-                <div className="mb-8 p-4 rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] flex items-center justify-between text-xs text-[#4D6153]">
+                <div className="mb-4 sm:mb-8 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] flex items-center justify-between text-xs text-[#4D6153]">
                   <div className="flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 text-[#6F9F73]" />
                     <span>{error}</span>
@@ -55,7 +55,7 @@ export function ImpactPage() {
 
               {/* Notice for pending reports in 24-hr holding period */}
               {pendingHoldingCount > 0 && (
-                <div className="mb-8 p-4 rounded-2xl bg-[#EEF5EC] border border-[#8EB892] flex items-center gap-3 text-xs sm:text-sm text-[#1F4D38]">
+                <div className="mb-4 sm:mb-8 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#EEF5EC] border border-[#8EB892] flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-[#1F4D38]">
                   <Clock className="w-4 h-4 text-[#6F9F73] shrink-0" />
                   <span>
                     You have <strong>{pendingHoldingCount} planting report</strong> currently in the 24-hour verification holding period. It will automatically contribute to public metrics once the hold elapses.
@@ -63,7 +63,7 @@ export function ImpactPage() {
                 </div>
               )}
 
-              <div className="surface-elevated rounded-3xl p-6 sm:p-10 shadow-xs border border-[#DDE9D8]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 shadow-xs border border-[#DDE9D8]">
                 <div className="flex items-center justify-between pb-6 border-b border-[#DDE9D8] flex-wrap gap-4">
                   <div>
                     <h3 className="font-display font-bold text-xl text-[#1F4D38]">

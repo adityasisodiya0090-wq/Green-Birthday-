@@ -33,10 +33,10 @@ export function MonthlyCycleVisual() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-y border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-y border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Continuous Rhythm"
               title="The Monthly Stewardship Cycle"
@@ -47,7 +47,7 @@ export function MonthlyCycleVisual() {
 
         {/* Circular / Horizontal Cycle Ribbon */}
         <ScrollReveal delayMs={150}>
-          <div className="max-w-5xl mx-auto surface-glass rounded-3xl p-8 sm:p-12 shadow-sm border border-white/90">
+          <div className="max-w-5xl mx-auto surface-glass rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-sm border border-white/90">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center relative">
               {cycleNodes.map((node, i) => (
                 <div key={node.label} className="flex flex-col items-center text-center group">

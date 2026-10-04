@@ -38,10 +38,10 @@ export function FivePracticalQuestionsSection() {
   ];
 
   return (
-    <section id="starter-kit-guide" className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80 scroll-mt-16">
+    <section id="starter-kit-guide" className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80 scroll-mt-16">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="The Essentials"
               title="Five Practical Questions"

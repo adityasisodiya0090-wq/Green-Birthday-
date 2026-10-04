@@ -39,9 +39,9 @@ export function Button({
     'group relative inline-flex items-center justify-center font-display font-semibold select-none whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed';
 
   const sizeStyles = {
-    sm: 'text-xs px-3.5 py-2 min-h-[44px] rounded-xl gap-1.5',
+    sm: 'text-xs px-3.5 py-1.5 min-h-[44px] rounded-xl gap-1.5',
     md: 'text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 min-h-[44px] sm:min-h-[46px] rounded-xl gap-2',
-    lg: 'text-sm sm:text-base px-4.5 sm:px-6 py-2.5 sm:py-3 min-h-[46px] sm:min-h-[50px] rounded-xl gap-2',
+    lg: 'text-xs sm:text-base px-4 sm:px-6 py-2 sm:py-3 min-h-[44px] sm:min-h-[48px] rounded-xl gap-2',
   };
 
   const variantStyles = {

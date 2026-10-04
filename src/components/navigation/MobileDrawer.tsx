@@ -63,14 +63,14 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
       />
 
       {/* Drawer surface with tactile elevation & safe-area awareness */}
-      <div className="fixed inset-y-0 right-0 w-full max-w-[280px] sm:max-w-xs h-[100dvh] bg-[#FFFDF7] border-l border-[#DDE9D8] shadow-2xl p-4 sm:p-6 pt-[max(1rem,var(--sat))] pb-[max(1rem,var(--sab))] flex flex-col justify-between overflow-y-auto transform transition-transform duration-300 ease-out">
+      <div className="fixed inset-y-0 right-0 w-full max-w-[270px] sm:max-w-xs h-[100dvh] bg-[#FFFDF7] border-l border-[#DDE9D8] shadow-2xl p-3.5 sm:p-5 pt-[max(0.75rem,var(--sat))] pb-[max(0.75rem,var(--sab))] flex flex-col justify-between overflow-y-auto transform transition-transform duration-300 ease-out">
         <div>
           {/* Header row */}
-          <div className="flex items-center justify-between pb-4 border-b border-[#DDE9D8]">
+          <div className="flex items-center justify-between pb-3.5 border-b border-[#DDE9D8]">
             <Logo size="sm" />
             <button
               onClick={onClose}
-              className="p-2 min-w-[44px] min-h-[44px] -mr-2 flex items-center justify-center text-[#4D6153] hover:text-[#1F4D38] hover:bg-[#DDE9D8]/50 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer"
+              className="p-2 min-w-[44px] min-h-[44px] -mr-1 flex items-center justify-center text-[#4D6153] hover:text-[#1F4D38] hover:bg-[#DDE9D8]/50 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1F4D38] cursor-pointer"
               aria-label="Close navigation"
             >
               <X className="w-5 h-5" />
@@ -78,7 +78,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           </div>
 
           {/* Navigation links */}
-          <nav className="mt-4 flex flex-col space-y-1">
+          <nav className="mt-3 flex flex-col space-y-1">
             {NAV_ITEMS.map((item) => {
               const isActive = currentPath === item.href;
               return (
@@ -86,7 +86,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   key={item.href}
                   href={item.href}
                   onClick={onClose}
-                  className={`px-3.5 py-2.5 rounded-xl font-display text-sm font-semibold transition-all duration-150 flex items-center justify-between min-h-[42px] ${
+                  className={`px-3 py-2.5 rounded-xl font-display text-xs sm:text-sm font-semibold transition-all duration-150 flex items-center justify-between min-h-[44px] ${
                     isActive
                       ? 'surface-active'
                       : 'text-[#1C2821] hover:bg-[#DDE9D8]/60 hover:text-[#1F4D38]'
@@ -101,7 +101,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         </div>
 
         {/* Bottom CTA container */}
-        <div className="pt-4 border-t border-[#DDE9D8] flex flex-col gap-2.5">
+        <div className="pt-3.5 border-t border-[#DDE9D8] flex flex-col gap-2">
           <Button
             variant="primary"
             size="md"
@@ -119,7 +119,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             {isToday ? 'Plant Today 🌱' : savedDay ? `My Green Day (${getOrdinalSuffix(savedDay)})` : 'Find My Green Day'}
           </Button>
 
-          <p className="text-center text-xs text-[#4D6153] font-medium">
+          <p className="text-center text-[11px] text-[#4D6153] font-medium">
             Plant. Nurture. Repeat.
           </p>
         </div>

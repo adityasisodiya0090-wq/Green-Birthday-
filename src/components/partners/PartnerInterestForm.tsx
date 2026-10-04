@@ -186,37 +186,37 @@ export function PartnerInterestForm() {
   return (
     <section
       id="partner-form-section"
-      className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80 scroll-mt-16"
+      className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80 scroll-mt-16"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         {isSuccess ? (
           /* SUCCESS STATE (Section 10 & 11) */
-          <div className="surface-elevated rounded-3xl p-8 sm:p-12 text-center border border-[#DDE9D8] shadow-sm space-y-6 animate-hero-center">
-            <div className="w-16 h-16 rounded-full bg-[#DDE9D8] text-[#1F4D38] flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8 text-[#1F4D38]" />
+          <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-12 text-center border border-[#DDE9D8] shadow-sm space-y-4 sm:space-y-6 animate-hero-center">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#DDE9D8] text-[#1F4D38] flex items-center justify-center mx-auto">
+              <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-[#1F4D38]" />
             </div>
 
-            <div className="space-y-3">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#6F9F73]">
+            <div className="space-y-2 sm:space-y-3">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#6F9F73]">
                 THANK YOU
               </span>
-              <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#1F4D38]">
+              <h3 className="font-display font-extrabold text-xl sm:text-3xl text-[#1F4D38]">
                 We received your interest in bringing Birthday Green to your community.
               </h3>
-              <p className="text-sm sm:text-base text-[#4D6153] leading-relaxed max-w-lg mx-auto">
+              <p className="text-xs sm:text-base text-[#4D6153] leading-relaxed max-w-lg mx-auto">
                 Birthday Green begins with one date. Communities help that date become a shared habit.
               </p>
-              <p className="text-xs text-[#7A8E80] max-w-lg mx-auto leading-relaxed pt-1">
+              <p className="text-[11px] sm:text-xs text-[#7A8E80] max-w-lg mx-auto leading-relaxed pt-1">
                 If a follow-up is possible, the information you've provided can be used to understand how your community would like to participate.
               </p>
             </div>
 
             {/* Crucial Disclosure (Section 10) */}
-            <div className="p-4 rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] text-xs text-[#4D6153] max-w-md mx-auto">
+            <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] text-xs text-[#4D6153] max-w-md mx-auto">
               <span className="font-bold text-[#1F4D38]">Important Note:</span> This is an expression of interest, not confirmation of a partnership or formal program launch.
             </div>
 
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 variant="primary"
                 size="md"
@@ -249,8 +249,8 @@ export function PartnerInterestForm() {
           </div>
         ) : (
           /* INPUT FORM (Sections 7, 8, 9, 10) */
-          <div className="surface-glass rounded-3xl p-7 sm:p-12 border border-white/90 shadow-xl shadow-[#1F4D38]/5">
-            <div className="text-center pb-6 mb-8 border-b border-[#DDE9D8]">
+          <div className="surface-glass rounded-2xl sm:rounded-3xl p-5 sm:p-12 border border-white/90 shadow-xl shadow-[#1F4D38]/5">
+            <div className="text-center pb-4 sm:pb-6 mb-6 sm:mb-8 border-b border-[#DDE9D8]">
               <span className="text-xs font-bold uppercase tracking-widest text-[#6F9F73] flex items-center justify-center gap-1.5 mb-1">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>EXPRESS COMMUNITY INTEREST</span>

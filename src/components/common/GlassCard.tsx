@@ -23,10 +23,10 @@ export function GlassCard({
 
   return (
     <div
-      className={`relative rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
+      className={`relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 transition-all duration-300 ${
         variantStyles[variant]
       } ${
-        glow ? 'ring-1 ring-[#6F9F73]/30 shadow-2xl' : ''
+        glow ? 'ring-1 ring-[#6F9F73]/30 shadow-xl' : ''
       } ${className}`}
       {...props}
     >

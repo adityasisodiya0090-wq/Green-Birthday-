@@ -32,10 +32,10 @@ export function ContactPage() {
   };
 
   return (
-    <div className="py-14 sm:py-20 surface-base">
+    <div className="py-6 sm:py-16 lg:py-20 surface-base">
       <Container size="narrow">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Community Inquiry"
               title="Want to get in touch?"
@@ -46,11 +46,11 @@ export function ContactPage() {
 
         {/* Section 41 Partner Prompt Callout */}
         <ScrollReveal delayMs={80}>
-          <div className="mb-10 surface-elevated rounded-3xl p-6 sm:p-8 border border-[#DDE9D8] text-center space-y-4 shadow-2xs">
-            <div className="w-12 h-12 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center mx-auto text-[#1F4D38]">
-              <Building2 className="w-6 h-6" />
+          <div className="mb-6 sm:mb-10 surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#DDE9D8] text-center space-y-3 sm:space-y-4 shadow-2xs">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center mx-auto text-[#1F4D38]">
+              <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="font-display font-extrabold text-xl text-[#1F4D38]">
+            <h3 className="font-display font-extrabold text-lg sm:text-xl text-[#1F4D38]">
               Bringing Birthday Green to a School or Society?
             </h3>
             <p className="text-xs sm:text-sm text-[#4D6153] max-w-md mx-auto leading-relaxed">
@@ -71,7 +71,7 @@ export function ContactPage() {
 
         {/* General Project Inquiries Form */}
         <ScrollReveal delayMs={150}>
-          <div className="surface-glass rounded-3xl p-7 sm:p-12 border border-white/90 shadow-xl shadow-[#1F4D38]/5">
+          <div className="surface-glass rounded-2xl sm:rounded-3xl p-5 sm:p-12 border border-white/90 shadow-xl shadow-[#1F4D38]/5">
             {submitted ? (
               <div className="text-center py-10 space-y-4 animate-hero-center">
                 <div className="w-16 h-16 rounded-full bg-[#DDE9D8] text-[#1F4D38] flex items-center justify-center mx-auto">

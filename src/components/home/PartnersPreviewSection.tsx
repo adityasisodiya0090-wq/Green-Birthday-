@@ -30,10 +30,10 @@ export function PartnersPreviewSection() {
   ];
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-12">
             <SectionHeading
               align="left"
               eyebrow="Collaborative Framework"
@@ -51,7 +51,7 @@ export function PartnersPreviewSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
           {groups.map((group, idx) => (
             <ScrollReveal key={group.title} delayMs={idx * 80}>
               <Card
@@ -59,10 +59,10 @@ export function PartnersPreviewSection() {
                 className="h-full flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#DDE9D8]/60 border border-[#DDE9D8] flex items-center justify-center mb-5 shadow-2xs">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#DDE9D8]/60 border border-[#DDE9D8] flex items-center justify-center mb-3 sm:mb-5 shadow-2xs">
                     {group.icon}
                   </div>
-                  <h3 className="font-display font-bold text-lg text-[#1F4D38] mb-2">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#1F4D38] mb-1 sm:mb-2">
                     {group.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -70,7 +70,7 @@ export function PartnersPreviewSection() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#DDE9D8]/60 text-xs font-semibold text-[#6F9F73]">
+                <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-[#DDE9D8]/60 text-[11px] sm:text-xs font-semibold text-[#6F9F73]">
                   Collaborative Sphere
                 </div>
               </Card>

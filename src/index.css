@@ -23,18 +23,18 @@
 :root {
   /* Mobile-first responsive type scale (~67-75% on narrow mobile, expanding gracefully) */
   --mobile-scale: 0.72;
-  --display-size: clamp(1.85rem, 5.2vw, 3.35rem);
-  --h1-size: clamp(1.5rem, 4.2vw, 2.6rem);
-  --h2-size: clamp(1.25rem, 3.2vw, 2rem);
-  --h3-size: clamp(1.05rem, 2.5vw, 1.45rem);
-  --body-size: clamp(0.85rem, 1.8vw, 1rem);
-  --small-size: clamp(0.72rem, 1.5vw, 0.875rem);
-  --label-size: clamp(0.65rem, 1.3vw, 0.75rem);
+  --display-size: clamp(1.65rem, 4.8vw, 3.25rem);
+  --h1-size: clamp(1.35rem, 3.8vw, 2.5rem);
+  --h2-size: clamp(1.125rem, 2.8vw, 1.85rem);
+  --h3-size: clamp(0.95rem, 2.1vw, 1.35rem);
+  --body-size: clamp(0.85rem, 1.5vw, 1rem);
+  --small-size: clamp(0.75rem, 1.3vw, 0.875rem);
+  --label-size: clamp(0.65rem, 1.1vw, 0.75rem);
 
   /* Responsive spacing system */
-  --space-section: clamp(2.25rem, 6vw, 5rem);
-  --space-section-compact: clamp(1.5rem, 4vw, 3.25rem);
-  --page-padding: clamp(0.75rem, 3.5vw, 2rem);
+  --space-section: clamp(2rem, 5vw, 4.5rem);
+  --space-section-compact: clamp(1.25rem, 3.5vw, 2.75rem);
+  --page-padding: clamp(0.875rem, 3.5vw, 2rem);
   --container-max: 76rem;
 
   /* Safe Area Insets for notch and gesture bars */
@@ -42,6 +42,24 @@
   --sab: env(safe-area-inset-bottom, 0px);
   --sal: env(safe-area-inset-left, 0px);
   --sar: env(safe-area-inset-right, 0px);
+}
+
+.text-fluid-display { font-size: var(--display-size); line-height: 1.15; }
+.text-fluid-h1 { font-size: var(--h1-size); line-height: 1.2; }
+.text-fluid-h2 { font-size: var(--h2-size); line-height: 1.25; }
+.text-fluid-h3 { font-size: var(--h3-size); line-height: 1.3; }
+.text-fluid-body { font-size: var(--body-size); line-height: 1.55; }
+.text-fluid-small { font-size: var(--small-size); line-height: 1.45; }
+.text-fluid-label { font-size: var(--label-size); line-height: 1.35; }
+
+.section-padding {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+.section-padding-compact {
+  padding-top: var(--space-section-compact);
+  padding-bottom: var(--space-section-compact);
 }
 
 @layer base {

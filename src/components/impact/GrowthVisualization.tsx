@@ -19,10 +19,10 @@ export function GrowthVisualization({
   const hasData = timeline.length > 1;
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Longitudinal Growth"
               title="Growing Over Time"
@@ -32,24 +32,24 @@ export function GrowthVisualization({
         </ScrollReveal>
 
         <ScrollReveal delayMs={150}>
-          <div className="max-w-4xl mx-auto surface-elevated rounded-3xl p-6 sm:p-10 border border-[#DDE9D8] shadow-xs">
+          <div className="max-w-4xl mx-auto surface-elevated rounded-2xl sm:rounded-3xl p-3.5 sm:p-8 border border-[#DDE9D8] shadow-xs">
             {!hasData || isZeroBaseline ? (
               /* Beautiful Zero-State Experience */
-              <div className="py-12 sm:py-16 text-center space-y-4 max-w-lg mx-auto">
-                <div className="w-16 h-16 rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center mx-auto text-[#1F4D38]">
-                  <Sprout className="w-8 h-8 text-[#1F4D38]" />
+              <div className="py-6 sm:py-12 text-center space-y-3 sm:space-y-4 max-w-lg mx-auto">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-[#DDE9D8]/70 flex items-center justify-center mx-auto text-[#1F4D38]">
+                  <Sprout className="w-6 h-6 sm:w-8 sm:h-8 text-[#1F4D38]" />
                 </div>
 
-                <div className="space-y-2">
-                  <h4 className="font-display font-extrabold text-2xl text-[#1F4D38]">
+                <div className="space-y-1 sm:space-y-2">
+                  <h4 className="font-display font-extrabold text-lg sm:text-2xl text-[#1F4D38]">
                     «The first Green Day is waiting to be counted.»
                   </h4>
-                  <p className="text-sm text-[#4D6153] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
                     «Plant something living. Your action can become the first mark on this growing record.»
                   </p>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2 sm:pt-4">
                   <Button
                     variant="primary"
                     size="md"

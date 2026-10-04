@@ -38,17 +38,17 @@ export function CelebrationCard({
   };
 
   return (
-    <div className="space-y-8 animate-hero-center">
+    <div className="space-y-4 sm:space-y-8 animate-hero-center">
       {/* Success Header */}
-      <div className="text-center space-y-3">
-        <span className="text-xs font-bold uppercase tracking-widest text-[#6F9F73] flex items-center justify-center gap-2">
-          <Sparkles className="w-4 h-4" />
+      <div className="text-center space-y-1.5 sm:space-y-3">
+        <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#6F9F73] flex items-center justify-center gap-1.5 sm:gap-2">
+          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span>CELEBRATE YOUR ACTION</span>
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1F4D38] tracking-tight">
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-[#1F4D38] tracking-tight">
           A birthday worth remembering.
         </h2>
-        <p className="text-base sm:text-lg text-[#4D6153] max-w-xl mx-auto leading-relaxed">
+        <p className="text-xs sm:text-base text-[#4D6153] max-w-xl mx-auto leading-relaxed">
           «You turned your Green Day into an action. Now comes the important part: nurture what you planted.»
         </p>
       </div>
@@ -56,7 +56,7 @@ export function CelebrationCard({
       {/* The Digital Celebration Card (Level 3 Forest Glass styling, strictly NOT a certificate) */}
       <div
         ref={cardRef}
-        className="max-w-xl mx-auto rounded-3xl surface-glass-forest p-8 sm:p-12 shadow-2xl relative overflow-hidden text-center text-white space-y-6 border border-white/20"
+        className="max-w-xl mx-auto rounded-2xl sm:rounded-3xl surface-glass-forest p-4 sm:p-10 shadow-xl relative overflow-hidden text-center text-white space-y-4 sm:space-y-6 border border-white/20"
       >
         {/* Subtle Decorative concentric rings */}
         <div
@@ -68,24 +68,24 @@ export function CelebrationCard({
           aria-hidden="true"
         />
 
-        <div className="relative z-10 space-y-4">
-          <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8EB892]">
-            <Sprout className="w-4 h-4" />
+        <div className="relative z-10 space-y-3 sm:space-y-4">
+          <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#8EB892]">
+            <Sprout className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             <span>BIRTHDAY GREEN</span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
+          <h3 className="text-lg sm:text-2xl font-display font-extrabold text-white tracking-tight">
             A Green Day Worth Remembering
           </h3>
 
-          <div className="py-4 border-y border-white/20 my-4 space-y-2">
-            <span className="text-xs uppercase tracking-wider text-[#DDE9D8]">
+          <div className="py-3 sm:py-4 border-y border-white/20 my-3 sm:my-4 space-y-1.5 sm:space-y-2">
+            <span className="text-[10px] sm:text-xs uppercase tracking-wider text-[#DDE9D8]">
               Planted On
             </span>
-            <div className="text-xl sm:text-2xl font-bold font-mono text-white">
+            <div className="text-lg sm:text-2xl font-bold font-mono text-white">
               {formattedDate}
             </div>
-            <div className="text-sm font-medium text-[#8EB892] capitalize">
+            <div className="text-xs sm:text-sm font-medium text-[#8EB892] capitalize">
               {saplingCount} {plantTypeLabel} · {location}
             </div>
           </div>
@@ -94,13 +94,13 @@ export function CelebrationCard({
             <p className="italic">
               «Your birthday gave you a date. Give that date a purpose.»
             </p>
-            <p className="text-[11px] text-[#8EB892] pt-1">
+            <p className="text-[11px] text-[#8EB892] pt-0.5 sm:pt-1">
               Next Green Day check-in: <strong>{nextGreenDayFormatted}</strong>
             </p>
           </div>
         </div>
 
-        <div className="relative z-10 text-[10px] text-white/60 tracking-wider uppercase pt-2">
+        <div className="relative z-10 text-[9px] sm:text-[10px] text-white/60 tracking-wider uppercase pt-1 sm:pt-2">
           Plant · Nurture · Repeat · Voluntary Personal Milestone
         </div>
       </div>

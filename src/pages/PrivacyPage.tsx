@@ -29,28 +29,28 @@ export function PrivacyPage() {
   return (
     <div className="flex flex-col">
       {/* 01 — Hero (Section 11) */}
-      <section className="relative pt-10 pb-16 sm:pt-16 sm:pb-22 overflow-hidden border-b border-[#DDE9D8]/80">
+      <section className="relative pt-6 pb-8 sm:pt-12 sm:pb-16 overflow-hidden border-b border-[#DDE9D8]/80">
         <div
           className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[380px] bg-gradient-to-b from-[#DDE9D8]/50 via-[#F7F3E8]/30 to-transparent blur-3xl -z-10"
           aria-hidden="true"
         />
         <Container size="narrow">
-          <div className="text-center space-y-5">
+          <div className="text-center space-y-4 sm:space-y-5">
             <ScrollReveal>
-              <div className="text-xs sm:text-sm font-bold tracking-widest text-[#6F9F73] uppercase flex items-center justify-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#1F4D38]" />
+              <div className="text-[11px] sm:text-xs font-bold tracking-widest text-[#6F9F73] uppercase flex items-center justify-center gap-1.5 sm:gap-2">
+                <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1F4D38]" />
                 <span>PRIVACY BY DESIGN</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delayMs={100}>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F4D38] tracking-tight leading-[1.14] [text-wrap:balance]">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F4D38] tracking-tight leading-tight [text-wrap:balance]">
                 Your privacy stays yours.
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delayMs={200}>
-              <p className="text-base sm:text-xl text-[#4D6153] leading-relaxed max-w-xl mx-auto">
+              <p className="text-sm sm:text-lg text-[#4D6153] leading-relaxed max-w-xl mx-auto">
                 «Birthday Green is designed to collect as little personal information as reasonably necessary.»
               </p>
             </ScrollReveal>
@@ -59,20 +59,20 @@ export function PrivacyPage() {
       </section>
 
       {/* 02 — Data Minimization (Section 20) */}
-      <section className="py-16 sm:py-22 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-canvas border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
-            <div className="surface-elevated rounded-3xl p-7 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#6F9F73]">
+            <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-3 sm:space-y-4">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#6F9F73]">
                 Fundamental Principle
               </span>
-              <h3 className="font-display font-extrabold text-2xl text-[#1F4D38]">
+              <h3 className="font-display font-extrabold text-lg sm:text-2xl text-[#1F4D38]">
                 We don't need to know everything about you.
               </h3>
-              <p className="text-sm sm:text-base text-[#4D6153] leading-relaxed">
+              <p className="text-xs sm:text-base text-[#4D6153] leading-relaxed">
                 «Birthday Green is designed around the principle that environmental participation should not require unnecessary personal information.»
               </p>
-              <p className="text-xs text-[#7A8E80] leading-relaxed pt-1">
+              <p className="text-[11px] sm:text-xs text-[#7A8E80] leading-relaxed pt-1">
                 You do not need to register a user account, create a password, provide a telephone number, or link a social profile to take care of living roots in the soil.
               </p>
             </div>
@@ -81,7 +81,7 @@ export function PrivacyPage() {
       </section>
 
       {/* 03 & 04 & 05 — Information Handled (Sections 12, 13, 14, 15, 16) */}
-      <section className="py-18 sm:py-26 surface-base border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-base border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <div className="space-y-8">
             {/* Calculator Privacy */}
@@ -189,15 +189,15 @@ export function PrivacyPage() {
       </section>
 
       {/* 06 & 07 — 24-Hour Holding Period & Community Impact (Sections 17, 18, 19) */}
-      <section className="py-18 sm:py-26 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-canvas border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {/* 24-Hour Holding Period */}
-              <div className="surface-elevated rounded-3xl p-7 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-3">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-2.5 sm:space-y-3">
                 <div className="flex items-center gap-2 pb-2 border-b border-[#DDE9D8]">
-                  <Clock className="w-5 h-5 text-[#6F9F73]" />
-                  <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#6F9F73]" />
+                  <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                     The 24-Hour Holding Period
                   </h4>
                 </div>
@@ -213,14 +213,14 @@ export function PrivacyPage() {
               </div>
 
               {/* Community-Reported Impact */}
-              <div className="surface-elevated rounded-3xl p-7 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-4">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-10 border border-[#DDE9D8] shadow-xs space-y-3 sm:space-y-4">
                 <div className="flex items-center gap-2 pb-2 border-b border-[#DDE9D8]">
-                  <AlertCircle className="w-5 h-5 text-[#6F9F73]" />
-                  <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#6F9F73]" />
+                  <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                     What do the impact numbers mean?
                   </h4>
                 </div>
-                <div className="p-4 rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] space-y-2 text-xs sm:text-sm text-[#4D6153] leading-relaxed">
+                <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#F7F3E8] border border-[#DDE9D8] space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-[#4D6153] leading-relaxed">
                   <p>
                     «Birthday Green's public impact figures are based on planting reports submitted by participants.»
                   </p>
@@ -241,12 +241,12 @@ export function PrivacyPage() {
       </section>
 
       {/* 08 & 09 & 10 — Local Storage, Cookies, Services, Security (Sections 21, 23, 24, 25, 26) */}
-      <section className="py-18 sm:py-26 surface-base border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-base border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
-            <div className="space-y-6">
-              <div className="surface-elevated rounded-3xl p-6 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-3">
-                <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-3">
+                <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                   Local Storage & Client Cache
                 </h4>
                 <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -280,8 +280,8 @@ export function PrivacyPage() {
               </div>
 
               {/* Cookies & Tracking */}
-              <div className="surface-elevated rounded-3xl p-6 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
-                <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
+                <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                   Zero Commercial Trackers
                 </h4>
                 <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -290,8 +290,8 @@ export function PrivacyPage() {
               </div>
 
               {/* Third-Party Services */}
-              <div className="surface-elevated rounded-3xl p-6 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
-                <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
+                <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                   Services We Use
                 </h4>
                 <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -300,8 +300,8 @@ export function PrivacyPage() {
               </div>
 
               {/* Security Safeguards */}
-              <div className="surface-elevated rounded-3xl p-6 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
-                <h4 className="font-display font-bold text-lg text-[#1F4D38]">
+              <div className="surface-elevated rounded-2xl sm:rounded-3xl p-5 sm:p-9 border border-[#DDE9D8] shadow-2xs space-y-2">
+                <h4 className="font-display font-bold text-base sm:text-lg text-[#1F4D38]">
                   Technical Security
                 </h4>
                 <p className="text-xs sm:text-sm text-[#4D6153] leading-relaxed">
@@ -317,7 +317,7 @@ export function PrivacyPage() {
       </section>
 
       {/* 11 — Combined FAQ (Section 39) */}
-      <section className="py-18 sm:py-26 surface-canvas border-b border-[#DDE9D8]/80">
+      <section className="py-8 sm:py-16 lg:py-20 surface-canvas border-b border-[#DDE9D8]/80">
         <Container size="narrow">
           <ScrollReveal>
             <CommonFaq />

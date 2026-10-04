@@ -27,7 +27,7 @@ export function SectionHeading({
     >
       {eyebrow && (
         <span
-          className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-1.5 sm:mb-2.5 ${
+          className={`text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-1 sm:mb-2 ${
             dark ? 'text-[#8EB892]' : 'text-[#6F9F73]'
           }`}
         >
@@ -36,7 +36,7 @@ export function SectionHeading({
       )}
 
       <h2
-        className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight [text-wrap:balance] ${
+        className={`text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight [text-wrap:balance] ${
           dark ? 'text-[#FFFDF7]' : 'text-[#1F4D38]'
         }`}
       >
@@ -45,7 +45,7 @@ export function SectionHeading({
 
       {description && (
         <p
-          className={`mt-2 sm:mt-3 text-xs sm:text-sm md:text-base max-w-2xl leading-relaxed ${
+          className={`mt-1.5 sm:mt-2.5 text-xs sm:text-sm md:text-base max-w-2xl leading-relaxed ${
             dark ? 'text-[#DDE9D8]/90' : 'text-[#4D6153]'
           }`}
         >

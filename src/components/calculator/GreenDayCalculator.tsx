@@ -230,10 +230,10 @@ export function GreenDayCalculator({
                   YOUR GREEN DAY
                 </span>
                 <div className="flex items-baseline gap-2.5 my-1 sm:my-2">
-                  <span className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold text-[#1F4D38] tracking-tighter tabular-nums leading-none">
+                  <span className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold text-[#1F4D38] tracking-tighter tabular-nums leading-none">
                     {getOrdinalSuffix(result.dayNumber)}
                   </span>
-                  <span className="text-sm sm:text-base font-semibold text-[#4D6153]">
+                  <span className="text-xs sm:text-base font-semibold text-[#4D6153]">
                     of every month
                   </span>
                 </div>
@@ -315,10 +315,10 @@ export function GreenDayCalculator({
             </div>
 
             {/* Calendar & Monthly Cycle Grid */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div className="mt-5 sm:mt-8 grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-8 items-start">
               {/* Mini Monthly Calendar */}
               {calendarGrid && (
-                <div className="md:col-span-6 surface-elevated rounded-2xl p-5 sm:p-6 border border-[#DDE9D8]">
+                <div className="md:col-span-6 surface-elevated rounded-2xl p-4 sm:p-6 border border-[#DDE9D8]">
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#DDE9D8]">
                     <span className="font-display font-bold text-sm text-[#1F4D38]">
                       {calendarGrid.monthName} {calendarGrid.year}
@@ -375,7 +375,7 @@ export function GreenDayCalculator({
               )}
 
               {/* Monthly Cycle Progression Visualization */}
-              <div className="md:col-span-6 surface-elevated rounded-2xl p-5 sm:p-6 border border-[#DDE9D8] flex flex-col justify-between h-full">
+              <div className="md:col-span-6 surface-elevated rounded-2xl p-4 sm:p-6 border border-[#DDE9D8] flex flex-col justify-between h-full">
                 <div>
                   <h5 className="font-display font-bold text-sm text-[#1F4D38] mb-3 pb-2 border-b border-[#DDE9D8]">
                     Recurring Rhythm
@@ -389,15 +389,15 @@ export function GreenDayCalculator({
                     <div className="p-2.5 rounded-xl bg-[#F7F3E8] border border-[#DDE9D8] w-full sm:w-auto">
                       THIS MONTH
                     </div>
-                    <span className="text-[#6F9F73] font-extrabold">↓</span>
+                    <span className="text-[#6F9F73] font-extrabold"><span className="sm:hidden">↓</span><span className="hidden sm:inline">→</span></span>
                     <div className="p-2.5 rounded-xl surface-active w-full sm:w-auto">
                       {getOrdinalSuffix(result.dayNumber)}
                     </div>
-                    <span className="text-[#6F9F73] font-extrabold">↓</span>
+                    <span className="text-[#6F9F73] font-extrabold"><span className="sm:hidden">↓</span><span className="hidden sm:inline">→</span></span>
                     <div className="p-2.5 rounded-xl bg-[#F7F3E8] border border-[#DDE9D8] w-full sm:w-auto">
                       NEXT MONTH
                     </div>
-                    <span className="text-[#6F9F73] font-extrabold">↓</span>
+                    <span className="text-[#6F9F73] font-extrabold"><span className="sm:hidden">↓</span><span className="hidden sm:inline">→</span></span>
                     <div className="p-2.5 rounded-xl bg-[#DDE9D8] text-[#1F4D38] w-full sm:w-auto">
                       KEEP GROWING
                     </div>
@@ -414,10 +414,10 @@ export function GreenDayCalculator({
             </div>
 
             {/* Action CTA Buttons (Section 23: Find My Green Day -> Your Green Day is the 16th -> Make It Yours -> My Green Day) */}
-            <div className="mt-10 pt-6 border-t border-[#DDE9D8]/80 flex flex-col sm:flex-row items-center gap-3">
+            <div className="mt-6 sm:mt-10 pt-4 sm:pt-6 border-t border-[#DDE9D8]/80 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               <Button
                 variant="primary"
-                size="lg"
+                size="md"
                 onClick={handleMakeItYours}
                 icon={<ArrowRight className="w-4 h-4" />}
                 className="w-full sm:w-auto font-bold"
@@ -427,7 +427,7 @@ export function GreenDayCalculator({
 
               <Button
                 variant={readyAcknowledged ? 'success' : 'secondary'}
-                size="lg"
+                size="md"
                 onClick={handleReadyClick}
                 icon={<CheckCircle2 className="w-4 h-4" />}
                 className="w-full sm:w-auto"
@@ -437,7 +437,7 @@ export function GreenDayCalculator({
 
               <Button
                 variant="outline"
-                size="lg"
+                size="md"
                 onClick={() => setIsShareModalOpen(true)}
                 icon={<Share2 className="w-4 h-4" />}
                 className="w-full sm:w-auto bg-white/90"
@@ -457,10 +457,10 @@ export function GreenDayCalculator({
             )}
 
             {/* Free Device Reminders & Calendar Sync */}
-            <GreenDayReminder className="mt-8" />
+            <GreenDayReminder className="mt-6 sm:mt-8" />
 
             {/* Core Responsibility: Plant. Nurture. Repeat. */}
-            <GreenDayResponsibility className="mt-8" />
+            <GreenDayResponsibility className="mt-6 sm:mt-8" />
           </div>
 
           {/* Share Modal Integration */}

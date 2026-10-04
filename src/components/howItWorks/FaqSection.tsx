@@ -53,10 +53,10 @@ export function FaqSection() {
   };
 
   return (
-    <section className="py-18 sm:py-26 surface-canvas relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-canvas relative border-b border-[#DDE9D8]/80">
       <Container size="narrow">
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Common Questions"
               title="Frequently Asked Questions"

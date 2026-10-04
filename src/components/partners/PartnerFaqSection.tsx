@@ -56,10 +56,10 @@ export function PartnerFaqSection() {
   };
 
   return (
-    <section className="py-18 sm:py-26 surface-base relative border-b border-[#DDE9D8]/80">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative border-b border-[#DDE9D8]/80">
       <Container size="narrow">
         <ScrollReveal>
-          <div className="text-center mb-14">
+          <div className="text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Partner Clarifications"
               title="Frequently Asked Questions"

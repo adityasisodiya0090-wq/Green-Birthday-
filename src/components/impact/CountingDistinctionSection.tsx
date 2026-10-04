@@ -5,10 +5,10 @@ import { Users, CalendarCheck, Sprout, Building2, AlertCircle } from '../common/
 
 export function CountingDistinctionSection() {
   return (
-    <section className="py-18 sm:py-26 surface-base relative">
+    <section className="py-8 sm:py-16 lg:py-20 surface-base relative">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="max-w-3xl mx-auto text-center mb-6 sm:mb-12">
             <SectionHeading
               eyebrow="Metric Clarity"
               title="What These Numbers Mean"
@@ -18,9 +18,9 @@ export function CountingDistinctionSection() {
         </ScrollReveal>
 
         {/* The 4 Distinct Definitions Grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-12">
           <ScrollReveal delayMs={80}>
-            <div className="surface-elevated rounded-2xl p-6 border border-[#DDE9D8] h-full flex flex-col justify-between">
+            <div className="surface-elevated rounded-2xl p-3.5 sm:p-6 border border-[#DDE9D8] h-full flex flex-col justify-between">
               <div>
                 <div className="w-10 h-10 rounded-xl bg-[#DDE9D8]/70 flex items-center justify-center text-[#1F4D38] mb-4">
                   <Sprout className="w-5 h-5 text-[#1F4D38]" />
